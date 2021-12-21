@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Subtotal from './Subtotal'
 import '../css/Cart.css'
 
 function Cart() {
@@ -21,7 +22,7 @@ function Cart() {
             </div>
 
             <div className="cart__right">
-                <h2>Subtotal component</h2>
+               <Subtotal />
             </div>
 
         </div>

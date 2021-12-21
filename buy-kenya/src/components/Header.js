@@ -35,10 +35,12 @@ function Header() {
                     <span className="header__optionContentTwo">Login</span>
                 </div>
                
-                <div className="header__shoppingBasket">
-                    <i style={{"padding":"5px","font-size":"30px","position":"relative"}} className="fa fa-shopping-cart"></i>
-                    <span className="header__basketCount">0</span>
-                </div>
+               <Link to="/cart">
+                    <div className="header__shoppingBasket">
+                        <i style={{"padding":"5px","font-size":"30px","position":"relative"}} className="fa fa-shopping-cart"></i>
+                        <span className="header__basketCount">0</span>
+                    </div>
+               </Link>
                 
             </div>
         </div>
