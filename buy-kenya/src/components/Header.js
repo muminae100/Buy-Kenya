@@ -1,11 +1,14 @@
 import React from 'react'
 import '../css/Header.css'
+import { Link } from "react-router-dom"
 
 function Header() {
     return (
         <div className="header">
-            <img className="header__logo" 
-            src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/ellamart-logo-w.png?v=1621222131" alt="Logo" />
+            <Link to="/">
+                <img className="header__logo" 
+                src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/ellamart-logo-w.png?v=1621222131" alt="Logo" />
+            </Link>
             <div className="header__hotline">
                 <p>Available 24/7 at (+84) 90 12345</p>
             </div>
