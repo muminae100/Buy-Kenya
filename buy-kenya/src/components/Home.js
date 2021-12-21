@@ -1,9 +1,12 @@
 import React from 'react'
+import Header from './Header'
 import Product from './Product'
 import '../css/Home.css'
 
 function Home() {
     return (
+        <>
+        <Header />
         <div className="home">
             <div className="home__container">
                 <div className="home__section">
@@ -196,6 +199,7 @@ function Home() {
 
             </div>
         </div>
+        </>
     )
 }
 
