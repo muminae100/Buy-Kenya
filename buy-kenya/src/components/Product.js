@@ -1,20 +1,22 @@
 import React from 'react'
 import '../css/Product.css'
 
-function Product() {
+function Product({id, title, image, price, colors, rating}) {
     return (
     <div className="product">
     <div className="product__info">
-        <p className="product__title">Mac book</p>
+        <p className="product__title">{title}</p>
         <p className="product__price">
             <small>$</small>
-            <strong>1000</strong>
+            <strong>{price}</strong>
         </p>
         <div className="product__rating">
-            <p><i style={{"color":"yellow"}} class="fas fa-star"></i></p>
+            {Array(rating).fill().map((_, i) =>(
+                <p><i style={{"color":"yellow"}} class="fas fa-star"></i></p>
+            )) }
         </div>
     </div>
-    <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599" 
+    <img src={image} 
     alt="" />
     <div className="product__colors">
         <div className="product__color" style={{"backgroundColor":"black"}}></div>
