@@ -5,16 +5,20 @@ function Header() {
     return (
         <div className="header">
             <img className="header__logo" 
-            src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/ellamart-logo-w.png?v=1621222131" />
+            src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/ellamart-logo-w.png?v=1621222131" alt="Logo" />
             <div className="header__hotline">
                 <p>Available 24/7 at (+84) 90 12345</p>
             </div>
             <div className="header__search">
                 <input type="text" className="header__searchInput" />
+                <i style={{"padding":"5px","backgroundColor":"#cd9042","height":"22px","font-size":"20px"}} 
+                className="fa fa-search header__searchIcon"></i>
             </div>
             <div className="header__nav">
                 <div className="header__option">
-                    <span className="header__optionContentOne">Love icon</span>
+                    <span className="header__optionContentOne">
+                        <i className="fa fa-heart"></i>
+                    </span>
                     <span className="header__optionContentTwo">Wish Lists</span>
                 </div>
                 <div className="header__option">
@@ -22,12 +26,17 @@ function Header() {
                     <span className="header__optionContentTwo">& orders</span>
                 </div>
                 <div className="header__option">
-                    <span className="header__optionContentOne">Account icon</span>
+                    <span className="header__optionContentOne">
+                        <i className="fas fa-user-alt"></i>
+                    </span>
                     <span className="header__optionContentTwo">Login</span>
                 </div>
-                <div className="header__option">
-                    <span className="header__optionContentOne">Cart icon</span>
+               
+                <div className="header__shoppingBasket">
+                    <i style={{"padding":"5px","font-size":"30px","position":"relative"}} className="fa fa-shopping-cart"></i>
+                    <span className="header__basketCount">0</span>
                 </div>
+                
             </div>
         </div>
     )
