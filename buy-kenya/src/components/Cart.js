@@ -2,8 +2,13 @@ import React from 'react'
 import Header from './Header'
 import Subtotal from './Subtotal'
 import '../css/Cart.css'
+import Cart_item from './Cart_item'
+import { useStateValue } from "../StateProvider"
 
 function Cart() {
+    const [{ basket }, dispatch] = useStateValue();
+
+
     return (
         <>
         <Header />
@@ -16,7 +21,17 @@ function Cart() {
                     <h2 className="cart__title">
                         My Cart
                     </h2>
-                    <h2>Cart item component</h2>
+                    {basket.map(item => (
+                        <Cart_item 
+                        id = {item.id}
+                        title={item.title}
+                        image={item.image}
+                        price={item.price}
+                        rating={item.rating}
+                        colors={item.colors}
+                        />
+                    ))}
+
                 </div>
 
             </div>

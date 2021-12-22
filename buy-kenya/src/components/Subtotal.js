@@ -1,11 +1,17 @@
 import React from 'react'
 import '../css/Subtotal.css'
 import CurrencyFormat from 'react-currency-format'
+import { useStateValue } from "../StateProvider"
+import { getBasketTotal } from '../reducer'
 
 function Subtotal() {
+    const [{ basket }, dispatch] = useStateValue();
+
+
     return (
         <div className="subtotal">
             <h2>Order Summary</h2>
+            <hr />
             <CurrencyFormat
             renderText={(value) =>(
                 <>
@@ -14,7 +20,7 @@ function Subtotal() {
                     <strong>{`${value}`}</strong>
                 </p>
                 <small className="subtotal__gift">
-                    <img style={{"width":"50px","height":"50px"}} 
+                    <img style={{"width":"100px","height":"100px"}} 
                     src="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/gift.jpg?v=1618299025"
                     alt="" />
                     <span>This order contains a gift</span>

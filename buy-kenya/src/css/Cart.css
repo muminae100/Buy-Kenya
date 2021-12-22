@@ -2,19 +2,22 @@
     display: flex;
     padding: 20px;
     height: max-content;
-}
-.cart__left{
-
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .cart__title{
     margin-right: 10px;
     padding: 10px;
-    border-bottom: 1px solid lightgray;
-}
-.cart__right{
-    
 }
 .cart__ad{
     width: 100%;
     margin-bottom: 10px;
+}
+.cart__left{
+    width: 60%;
+    margin: 10px;
+}
+.cart__right{
+    width: 30%;
+    margin: 10px;
 }
