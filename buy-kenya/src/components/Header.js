@@ -17,7 +17,7 @@ function Header() {
             </div>
             <div className="header__search">
                 <input type="text" className="header__searchInput" />
-                <i style={{"padding":"5px","backgroundColor":"#cd9042","height":"22px","font-size":"20px"}} 
+                <i style={{"padding":"5px","backgroundColor":"#cd9042","height":"22px","fontSize":"20px"}} 
                 className="fa fa-search header__searchIcon"></i>
             </div>
             <div className="header__nav">
@@ -41,7 +41,7 @@ function Header() {
                 </Link>
                <Link to="/cart">
                     <div className="header__shoppingBasket">
-                        <i style={{"padding":"5px","font-size":"30px","position":"relative"}} className="fa fa-shopping-cart"></i>
+                        <i style={{"padding":"5px","fontSize":"30px","position":"relative"}} className="fa fa-shopping-cart"></i>
                         <span className="header__basketCount">{basket?.length}</span>
                     </div>
                </Link>
