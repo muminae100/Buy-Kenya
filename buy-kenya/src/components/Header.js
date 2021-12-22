@@ -31,13 +31,14 @@ function Header() {
                     <span className="header__optionContentOne">Returns</span>
                     <span className="header__optionContentTwo">& orders</span>
                 </div>
+                <Link to="/login">
                 <div className="header__option">
                     <span className="header__optionContentOne">
                         <i className="fas fa-user-alt"></i>
                     </span>
                     <span className="header__optionContentTwo">Login</span>
                 </div>
-               
+                </Link>
                <Link to="/cart">
                     <div className="header__shoppingBasket">
                         <i style={{"padding":"5px","font-size":"30px","position":"relative"}} className="fa fa-shopping-cart"></i>
