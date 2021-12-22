@@ -15,33 +15,15 @@ function Cart_item({id, title, image, price,rating, colors}) {
     }
 
     return (
+        <>
         <div className="cart__item">
             <div className="cart__itemImage">
-            <img style={{"width":"150px","height":"150px"}} src={image} alt="" />
-            <div className="cart__itemColors">
-                <div className="cart__itemColor" style={{"backgroundColor":"black"}}></div>
-                <div className="cart__itemColor" style={{"backgroundColor":"red"}}></div>
-                <div className="cart__itemColor" style={{"backgroundColor":"sandybrown"}}></div>
-                <div className="cart__itemColor" style={{"backgroundColor":"slategray"}}></div>
-            </div>
+            <img style={{"width":"100px","height":"100px"}} src={image} alt="" />
             </div>
             <div className="cart__itemTitle">
-                <p>Title</p>
-                <p>{title}</p>
+                <span>{title}</span>
             </div>
             <div className="cart__itemPrice">
-                <div>Price</div>
-                <div>
-                <small>$</small>
-                <strong>{price}</strong>
-                </div>
-            </div>
-            <div className="cart__itemQuantity">
-                <p>Quantity</p>
-                <p>1</p>
-            </div>
-            <div className="cart__itemTotal">
-                <p>Total</p>
                 <div>
                 <small>$</small>
                 <strong>{price}</strong>
@@ -51,6 +33,7 @@ function Cart_item({id, title, image, price,rating, colors}) {
                 <button onClick={removeFromBasket} className="cart__itemButton">&times;</button>
             </div>
         </div>
+        </>
     )
 }
 

@@ -10,21 +10,24 @@ function Subtotal() {
 
     return (
         <div className="subtotal">
-            <h2>Order Summary</h2>
-            <hr />
+            <h2 style={{"borderBottom":"2px solid #131921","padding":"10px"}}>Order Summary</h2>
             <CurrencyFormat
             renderText={(value) =>(
                 <>
-                <p>
-                    Subtotal ({basket.length} items):
-                    <strong>{`${value}`}</strong>
-                </p>
+                <div className="subtotal__itemsCount">
+                    <p>Items</p>
+                    <p>{basket.length} item(s):</p>
+                </div>
                 <small className="subtotal__gift">
                     <img style={{"width":"100px","height":"100px"}} 
                     src="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/gift.jpg?v=1618299025"
                     alt="" />
                     <span>This order contains a gift</span>
                 </small>
+                <div className="subtotal__total">
+                    <p>Total</p>
+                    <p><strong>{`${value}`}</strong></p>
+                </div>
                 </>
             ) }
             decimalScale={2}
@@ -34,8 +37,8 @@ function Subtotal() {
             prefix={"$"}
             />
 
-            <button className="subtotal__button">Proceed to Checkout</button>
-            <button className="subtotal__button">Continue shopping</button>
+            <button className="subtotal__button1">Proceed to Checkout</button>
+            <button className="subtotal__button2">Continue shopping</button>
         </div>
     )
 }
