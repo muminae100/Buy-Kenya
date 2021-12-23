@@ -1,12 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 import Cart_item from './Cart_item'
 import '../css/Checkout.css'
 import { useStateValue } from "../StateProvider"
 import { Link } from "react-router-dom"
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { getBasketTotal } from '../reducer'
+import CurrencyFormat from 'react-currency-format'
+import { async } from '@firebase/util'
 
 function Checkout() {
     const [{ basket, user }, dispatch] = useStateValue();
+
+    const stripe = useStripe();
+    const elements = useElements();
+
+    const [succeeded, setSucceeded] = useState(false);
+    const [processing, setProcessing] =useState("");
+
+    const [error, setError] = useState(null);
+    const [disabled, setDisabled] = useState(true);
+    const [clientSecret, setClientSecret] = useState(true);
+
+    useEffect(() => {
+        const getClientSecret = async () =>{
+            const response = await axios
+        }
+        getClientSecret();
+    }, [basket])
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setProcessing(true);
+    }
+    const handleChange = event => {
+        setDisabled(event.empty);
+        setError(event.error ? event.error.message : "");
+    }
 
     return (
         <>
@@ -47,14 +77,39 @@ function Checkout() {
                         ))}
                     </div>
                 </div>
+                <br />
                 <div className="checkout__section">
                     <div className="checkout__title">
                         <h3>
                             Payment method
                         </h3>
                     </div>
-                    <div className="payment__details">
-                        {/* stripe */}
+                    <div className="checkout__details">
+                    <form onSubmit={handleSubmit}>
+                        <CardElement onChange={handleChange} />
+
+                        <div className="payment__priceContainer">
+                        <CurrencyFormat
+                        renderText={(value) =>(
+                            <div className="subtotal__total">
+                                <h3>Total</h3>
+                                <p><strong>{`${value}`}</strong></p>
+                            </div>
+                        ) }
+                        decimalScale={2}
+                        value={getBasketTotal(basket)}
+                        displayType={"text"}
+                        thousandSeparator={true}
+                        prefix={"$"}
+                        />
+                        <button disabled={processing || disabled || succeeded}>
+                            <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                        </button>
+
+                        {error && <div>{error}</div>}
+                        </div>
+                        
+                    </form>
                     </div>
                 </div>
             </div>
