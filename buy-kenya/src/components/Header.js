@@ -42,7 +42,8 @@ function Header() {
                 <Link to={!user && '/login'}>
                 <div onClick={handleAuthentication} className="header__option">
                     <span className="header__optionContentOne">
-                        <i className="fas fa-user-alt"></i>
+                        {user ? `Hello, ${user.email}` : 'Hello,'}
+                        
                     </span>
                     <span className="header__optionContentTwo">
                         {user ? 'Logout' : 'Login'}
