@@ -25,11 +25,12 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 10%;
+    flex: 0.3;
 }
 
 .carousel{
     display: flex;
-    flex: 1;
+    flex: 0.3;
 }
 /* .offers__container{
     display: flex;
