@@ -2,9 +2,17 @@ import React from 'react'
 import '../css/Header.css'
 import { Link } from "react-router-dom"
 import { useStateValue } from "../StateProvider"
+import { auth } from './Firebase'
+import {signOut} from 'firebase/auth'
 
 function Header() {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
+
+    const handleAuthentication = () =>{
+        if (user){
+            signOut(auth);
+        }
+    }
 
     return (
         <div className="header">
@@ -31,12 +39,14 @@ function Header() {
                     <span className="header__optionContentOne">Returns</span>
                     <span className="header__optionContentTwo">& orders</span>
                 </div>
-                <Link to="/login">
-                <div className="header__option">
+                <Link to={!user && '/login'}>
+                <div onClick={handleAuthentication} className="header__option">
                     <span className="header__optionContentOne">
                         <i className="fas fa-user-alt"></i>
                     </span>
-                    <span className="header__optionContentTwo">Login</span>
+                    <span className="header__optionContentTwo">
+                        {user ? 'Logout' : 'Login'}
+                    </span>
                 </div>
                 </Link>
                <Link to="/cart">
