@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import Order from './Order'
 import Header from './Header'
-import '../css/Orders'
+import '../css/Orders.css'
 import { db } from './Firebase'
 import { useStateValue } from '../StateProvider'
+import {query, collection, onSnapshot, orderBy} from 'firebase/firestore'
 
 function Orders() {
     const [{user}] = useStateValue();
@@ -10,17 +12,18 @@ function Orders() {
 
     useEffect(() => {
         if(user){
-        //deprecated
-        db.collections('users').doc(user?.uid).collections('orders').orderBy('created', 'desc').onSnapshot(snapshot =>{
-            setOrders(snapshot.docs.map(doc =>{
-                id: doc.id;
-                data: doc.data()
-            }))
+        const orderedOrders = query(ref, orderBy('created', 'desc'))
+        onSnapshot(orderedOrders, snapshot => {
+            setOrders(snapshot.docs.map(doc => ({
+            id: doc.id,
+            data: doc.data()
+            })))
         })
 
         }else{
             setOrders([])
         }
+
        
     }, [user])
 

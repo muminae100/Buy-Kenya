@@ -9,7 +9,7 @@ import { getBasketTotal } from '../reducer'
 import CurrencyFormat from 'react-currency-format'
 import axios from '../axios'
 import { db } from './Firebase'
-//import collections
+import {doc, setDoc} from 'firebase/firestore'
 
 
 function Checkout() {
@@ -25,6 +25,14 @@ function Checkout() {
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [clientSecret, setClientSecret] = useState(true);
+
+
+    const appearance = {
+        theme: 'night'
+      };
+      
+      // Pass the appearance object to the Elements instance
+    const elements = stripe.elements({clientSecret, appearance});
 
     useEffect(() => {
         const getClientSecret = async () =>{
@@ -48,13 +56,14 @@ function Checkout() {
             }
         })
         .then(({ paymentIntent }) => {
-            //deprecated
-            db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id)
-            .set({
-                basket: basket,
-                amount: paymentIntent.amount,
-                created: paymentIntent.created
+
+            const ref = doc(db, 'users', user?.uid, 'orders', paymentIntent.id)
+            setDoc(ref, {
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created
             })
+
 
             setSucceeded(true);
             setError(null);
@@ -64,7 +73,7 @@ function Checkout() {
                 type: 'EMPTY_BASKET'
             })
 
-            navigate('/orders')
+            navigate('/orders', { replace: true })
         })
     }
     const handleChange = event => {

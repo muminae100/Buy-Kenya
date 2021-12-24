@@ -4133,3 +4133,47 @@ SyntaxError: missing ) after argument list
 [debug] [2021-12-23T23:40:37.267Z] [worker-us-central1-api-39d7d2b8-feb4-4786-8dbc-c980ce6acde5]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-39d7d2b8-feb4-4786-8dbc-c980ce6acde5]: exited"}}
 [debug] [2021-12-23T23:40:37.267Z] [worker-us-central1-api-39d7d2b8-feb4-4786-8dbc-c980ce6acde5]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-39d7d2b8-feb4-4786-8dbc-c980ce6acde5]: FINISHED"}}
 [debug] [2021-12-23T23:40:37.267Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-12-24T07:48:37.705Z] ----------------------------------------------------------------------
+[debug] [2021-12-24T07:48:37.710Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\saval\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2021-12-24T07:48:37.711Z] CLI Version:   10.0.1
+[debug] [2021-12-24T07:48:37.712Z] Platform:      win32
+[debug] [2021-12-24T07:48:37.713Z] Node Version:  v16.13.1
+[debug] [2021-12-24T07:48:37.839Z] Time:          Fri Dec 24 2021 10:48:37 GMT+0300 (East Africa Time)
+[debug] [2021-12-24T07:48:37.840Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-24T07:48:38.045Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-24T07:48:38.047Z] > authorizing via signed-in user (smuminaetx100@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project buy-kenya. This may result in unexpected behavior. 
+[debug] [2021-12-24T07:48:38.153Z] [hub] writing locator at C:\Users\saval\AppData\Local\Temp\hub-buy-kenya.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2021-12-24T07:48:38.326Z] defaultcredentials: writing to file C:\Users\saval\AppData\Roaming\firebase\smuminaetx100_gmail_com_application_default_credentials.json
+[debug] [2021-12-24T07:48:38.331Z] Setting GAC to C:\Users\saval\AppData\Roaming\firebase\smuminaetx100_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\saval\\AppData\\Roaming\\firebase\\smuminaetx100_gmail_com_application_default_credentials.json"}}
+[debug] [2021-12-24T07:48:38.337Z] > refreshing access token with scopes: []
+[debug] [2021-12-24T07:48:38.339Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-24T07:48:38.972Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 24 Dec 2021 07:48:38 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-24T07:48:39.033Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/buy-kenya/adminSdkConfig [none]
+[debug] [2021-12-24T07:48:39.840Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/buy-kenya/adminSdkConfig 200
+[debug] [2021-12-24T07:48:39.840Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/buy-kenya/adminSdkConfig {"projectId":"buy-kenya","storageBucket":"buy-kenya.appspot.com"}
+[debug] [2021-12-24T07:48:39.887Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/buy-kenya/sites 
+[debug] [2021-12-24T07:48:41.853Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/buy-kenya/sites 200
+[debug] [2021-12-24T07:48:41.853Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/buy-kenya/sites {"sites":[{"name":"projects/78144482614/sites/buy-kenya","defaultUrl":"https://buy-kenya.web.app","appId":"1:78144482614:web:ff114225eae80fa7f05797","type":"DEFAULT_SITE"}]}
+[debug] [2021-12-24T07:48:41.854Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/buy-kenya/webApps/1:78144482614:web:ff114225eae80fa7f05797/config [none]
+[debug] [2021-12-24T07:48:42.993Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/buy-kenya/webApps/1:78144482614:web:ff114225eae80fa7f05797/config 200
+[debug] [2021-12-24T07:48:42.994Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/buy-kenya/webApps/1:78144482614:web:ff114225eae80fa7f05797/config {"projectId":"buy-kenya","appId":"1:78144482614:web:ff114225eae80fa7f05797","storageBucket":"buy-kenya.appspot.com","apiKey":"AIzaSyDXew1U4jzy1MjRNhFdFFKHrenEEGSGsjU","authDomain":"buy-kenya.firebaseapp.com","messagingSenderId":"78144482614","measurementId":"G-RRL36RYW9R"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2021-12-24T07:48:43.272Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-12-24T07:48:43.272Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-12-24T07:48:43.273Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\saval\\.cache\\firebase\\emulators\\ui-v1.6.4\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\saval\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.4\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-12-24T07:48:43.519Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "C:\Users\saval\Desktop\Buy-Kenya\buy-kenya\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\saval\\Desktop\\Buy-Kenya\\buy-kenya\\functions\" for Cloud Functions..."}}
+[debug] [2021-12-24T07:48:43.664Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2021-12-24T07:48:43.665Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2021-12-24T07:48:43.665Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2021-12-24T07:48:43.665Z] [worker-~diagnostic~-2a9ae472-facf-4c04-8e7d-70dc42b3d048]: Assigning socketPath: \\?\pipe\C:\Users\saval\Desktop\Buy-Kenya\buy-kenya\functions\516 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-2a9ae472-facf-4c04-8e7d-70dc42b3d048]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\saval\\Desktop\\Buy-Kenya\\buy-kenya\\functions\\516"}}
+[debug] [2021-12-24T07:48:43.666Z] [worker-~diagnostic~-2a9ae472-facf-4c04-8e7d-70dc42b3d048]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-2a9ae472-facf-4c04-8e7d-70dc42b3d048]: BUSY"}}
