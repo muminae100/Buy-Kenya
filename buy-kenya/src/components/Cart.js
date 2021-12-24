@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Subtotal from './Subtotal'
 import '../css/Cart.css'
-import Cart_item from './Cart_item'
+import CartItem from './CartItem'
 import { useStateValue } from "../StateProvider"
 
 function Cart() {
@@ -22,7 +22,7 @@ function Cart() {
                         My Cart
                     </h2>
                     {basket.map(item => (
-                        <Cart_item 
+                        <CartItem 
                         id = {item.id}
                         title={item.title}
                         image={item.image}

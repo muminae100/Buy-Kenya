@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/Cart_item.css'
 import { useStateValue } from "../StateProvider"
 
-function Cart_item({id, title, image, price,rating, colors}) {
+function CartItem({id, title, image, price,rating, colors, hideButton}) {
     const [{ basket }, dispatch] = useStateValue();
     const removeFromBasket = () =>{
             dispatch({
@@ -30,11 +30,14 @@ function Cart_item({id, title, image, price,rating, colors}) {
                 </div>
             </div>
             <div className="cart__itemButtonContainer">
-                <button onClick={removeFromBasket} className="cart__itemButton">&times;</button>
+                {!hideButton && (
+                    <button onClick={removeFromBasket} className="cart__itemButton">&times;</button>
+                )}
+                
             </div>
         </div>
         </>
     )
 }
 
-export default Cart_item
+export default CartItem

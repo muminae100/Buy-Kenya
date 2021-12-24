@@ -35,10 +35,12 @@ function Header() {
                     </span>
                     <span className="header__optionContentTwo">Wish Lists</span>
                 </div>
+                <Link to='/orders'>
                 <div className="header__option">
                     <span className="header__optionContentOne">Returns</span>
                     <span className="header__optionContentTwo">& orders</span>
                 </div>
+                </Link>
                 <Link to={!user && '/login'}>
                 <div onClick={handleAuthentication} className="header__option">
                     <span className="header__optionContentOne">

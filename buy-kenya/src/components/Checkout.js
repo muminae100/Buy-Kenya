@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
-import Cart_item from './Cart_item'
+import CartItem from './CartItem'
 import '../css/Checkout.css'
 import { useStateValue } from "../StateProvider"
-import { Link, Navigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getBasketTotal } from '../reducer'
 import CurrencyFormat from 'react-currency-format'
 import axios from '../axios'
-import { async } from '@firebase/util'
+import { db } from './Firebase'
+//import collections
+
 
 function Checkout() {
     const [{ basket, user }, dispatch] = useStateValue();
-    const navigate = Navigate();
+    const navigate = useNavigate();
 
     const stripe = useStripe();
     const elements = useElements();
@@ -35,6 +37,8 @@ function Checkout() {
         getClientSecret();
     }, [basket])
 
+    console.log('The secret is', clientSecret)
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setProcessing(true);
@@ -44,11 +48,23 @@ function Checkout() {
             }
         })
         .then(({ paymentIntent }) => {
+            //deprecated
+            db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id)
+            .set({
+                basket: basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
+
             setSucceeded(true);
             setError(null);
             setProcessing(false);
 
-            navigate.replace('/orders')
+            dispatch({
+                type: 'EMPTY_BASKET'
+            })
+
+            navigate('/orders')
         })
     }
     const handleChange = event => {
@@ -84,7 +100,7 @@ function Checkout() {
                     </div>
                     <div className="checkout__items">
                         {basket.map(item => (
-                            <Cart_item 
+                            <CartItem 
                             id = {item.id}
                             title={item.title}
                             image={item.image}

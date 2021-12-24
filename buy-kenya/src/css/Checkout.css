@@ -1,4 +1,4 @@
-/* .checkout__container > h1{
+.checkout__container > h1{
     text-align: center;
     padding: 10px;
     font-weight: 400;
@@ -20,6 +20,5 @@
 .checkout__details{
     padding: 10px;
     height: 200px;
-    background-color: lightsalmon;
     width: 200px;
-} */
+}

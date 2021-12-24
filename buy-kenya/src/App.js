@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Cart from './components/Cart'
 import Checkout from "./components/Checkout";
+import Orders from "./components/Orders";
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import './App.css';
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/cart" element={<Cart/>} />
         <Route exact path="/checkout" element={<Elements stripe={promise}><Checkout/></Elements>} />
+        <Route exact path="/orders" element={<Orders/>} />
         <Route path="*" element={<Home/>}/>
         <Route exact path="/" element={<Home/>} />
        </Routes>
