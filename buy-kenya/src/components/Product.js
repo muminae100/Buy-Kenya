@@ -25,7 +25,7 @@ function Product({id, title, image, price, colors, rating, amount}) {
         <img src={image} alt="" />
         <div className="product__rating">
             {Array(rating).fill().map((_, i) =>(
-                <p><i style={{"color":"yellow"}} class="fas fa-star"></i></p>
+                <p><i style={{"color":"orange"}} class="fas fa-star"></i></p>
             )) }
         </div>
         <p className="product__title">{title}</p>
@@ -38,11 +38,11 @@ function Product({id, title, image, price, colors, rating, amount}) {
         <div className="product__color" style={{"backgroundColor":"beige"}}></div>
         <div className="product__color" style={{"backgroundColor":"sandybrown"}}></div>
         <div className="product__color" style={{"backgroundColor":"slategray"}}></div>
+        {/* <div className="product__color"><i style={{"fontSize":"24px","color":"gray"}} 
+        className="fa fa-heart"></i></div> */}
         </div>
         <div className="product__bottom">
         <button onClick={addToBasket} className="product__button">Add to cart</button>
-        <span><i style={{"fontSize":"24px","color":"gray"}} 
-        className="fa fa-heart"></i></span>
         </div>
     
     </div>

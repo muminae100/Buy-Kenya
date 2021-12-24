@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import Product from './Product'
 import '../css/Home.css'
+import Carousel from 'react-elastic-carousel';
 
 function Home() {
     const calculateTimeLeft = () => {
@@ -38,7 +39,16 @@ function Home() {
             {timeLeft[interval]} {interval}{" "}
           </span>
         );
-      });
+      });     
+
+    //   const breakPoints = [
+    //     { width: 1, itemsToShow: 1 },
+    //     { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
+    //     { width: 850, itemsToShow: 3 },
+    //     { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+    //     { width: 1450, itemsToShow: 5 },
+    //     { width: 1750, itemsToShow: 6 }
+    //   ];
 
     return (
         <>
@@ -65,40 +75,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div>
-                <div id="demo" className="carousel slide" data-ride="carousel">
-
-                
-                <ul className="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" className="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                </ul>
-
-                <div className="carousel-inner">
-                <div className="carousel-item active">
-                <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s1_8b968f52-493e-4178-953b-dfb1597857fb.jpg?v=1638362212"
-                alt="" />
-                </div>
-                <div className="carousel-item">
-                <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s1_8b968f52-493e-4178-953b-dfb1597857fb.jpg?v=1638362212"
-                alt="" />
-                </div>
-                <div className="carousel-item">
-                <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s1_8b968f52-493e-4178-953b-dfb1597857fb.jpg?v=1638362212"
-                alt="" />
-                </div>
-                </div>
-
-                <a className="carousel-control-prev" href="#demo" data-slide="prev">
-                <span className="carousel-control-prev-icon"></span>
-                </a>
-                <a className="carousel-control-next" href="#demo" data-slide="next">
-                <span className="carousel-control-next-icon"></span>
-                </a>
-
-                </div>
-                                
+                <div>            
                 </div>
 
                 <div className="offers__container">
@@ -123,6 +100,7 @@ function Home() {
                     </div>
 
                     <div className="home__rowTwo">
+                    <Carousel itemsToShow={6}>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-1_1024x1024_crop_center.png?v=1620208565" alt="" />
                             <p>Televisions</p>
@@ -147,6 +125,8 @@ function Home() {
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
                             <p>Televisions</p>
                         </div>
+                    </Carousel>
+                       
                     </div>
 
                 </div>
@@ -161,37 +141,56 @@ function Home() {
                     </div>
 
                     <div className="home__rowThree">
-                    <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                       
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" amount={20} />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
+                        <Carousel itemsToShow={4}>
+                        <div id='item1' className="card">
+                            Item
+                        </div>
+                        <div id='item2' className="card">
+                            Item
+                        </div >
+                        <div id='item3' className="card">
+                            Item
+                        </div>
+                        <div id='item4' className="card">
+                            Item
+                        </div>
+                        <div id='item5' className="card">
+                            Item
+                        </div>
+                        <div id='item6' className="card">
+                            Item
+                        </div>
+                        </Carousel>
+                        
                     </div>
 
                 </div>
-                <div className="home__sectionFour">
-                    <div className="home__sectionTitle">
+                <div>
+                    <div>
                         <h2>Featured Products</h2>
                     </div>
 
-                    <div className="home__row">
-                    <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'
-                    price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                     <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                     <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
+                    <div className="home__rowThree">
+                    <Carousel itemsToShow={4}>
+                        <div id='item1' className="card">
+                            Item
+                        </div>
+                        <div id='item2' className="card">
+                            Item
+                        </div >
+                        <div id='item3' className="card">
+                            Item
+                        </div>
+                        <div id='item4' className="card">
+                            Item
+                        </div>
+                        <div id='item5' className="card">
+                            Item
+                        </div>
+                        <div id='item6' className="card">
+                            Item
+                        </div>
+                        </Carousel>
                     </div>
 
                 </div>
