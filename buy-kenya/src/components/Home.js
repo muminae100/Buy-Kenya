@@ -56,7 +56,7 @@ function Home() {
         <div className="home">
                 <div className="home__section">
 
-                <div className="collections__container">
+                <div style={{"width":"200px"}} className="collections__container">
                     <div className="collections__item">
                         <i className="fas fa-dumbbell"></i>
                         <span>Sports</span>
@@ -75,10 +75,21 @@ function Home() {
                     </div>
                 </div>
 
-                <div>            
+                <div style={{"width":"750px"}} className="slide__show">
+                    <Carousel itemToShow={1}>
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s3.jpg?v=1620186768" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s1_8b968f52-493e-4178-953b-dfb1597857fb.jpg?v=1638362212" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s2.jpg?v=1620186744" alt="" />
+                    </div>
+                    </Carousel>          
                 </div>
 
-                <div className="offers__container">
+                <div style={{"width":"450px"}} className="offers__container">
                     <div className="offer__item">
                         <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/b1.png?v=1620209222" alt="" />
                     </div>
@@ -125,6 +136,22 @@ function Home() {
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
                             <p>Televisions</p>
                         </div>
+                        <div className="home__categoryImageBox">
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            <p>Televisions</p>
+                        </div>
+                        <div className="home__categoryImageBox">
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            <p>Televisions</p>
+                        </div>
+                        <div className="home__categoryImageBox">
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            <p>Televisions</p>
+                        </div>
+                        <div className="home__categoryImageBox">
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            <p>Televisions</p>
+                        </div>
                     </Carousel>
                        
                     </div>
@@ -132,9 +159,9 @@ function Home() {
                 </div>
 
                 <div className="home__sectionThree">
-                    <div style={{"padding":"20px"}} className="home__sectionTitleThree">
+                    <div style={{"padding":"20px","marginLeft":"35px"}} className="home__sectionTitleThree">
                         <i style={{"color":"#e10600","fontWeight":"700","fontSize":"20px"}} className="fas fa-fire"></i>
-                        <h2 className="hot__deals">HOT DEALS</h2>
+                        <h1 className="hot__deals">HOT DEALS</h1>
                         <div style={{"marginLeft":"20px","fontWeight":"700"}}>
                         {timerComponents.length ? timerComponents : <span style={{"color":"red"}}>Time's up!</span>}
                         </div>
@@ -142,24 +169,22 @@ function Home() {
 
                     <div className="home__rowThree">
                         <Carousel itemsToShow={4}>
-                        <div id='item1' className="card">
-                            Item
-                        </div>
-                        <div id='item2' className="card">
-                            Item
-                        </div >
-                        <div id='item3' className="card">
-                            Item
-                        </div>
-                        <div id='item4' className="card">
-                            Item
-                        </div>
-                        <div id='item5' className="card">
-                            Item
-                        </div>
-                        <div id='item6' className="card">
-                            Item
-                        </div>
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                        rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                            <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
                         </Carousel>
                         
                     </div>
@@ -172,25 +197,23 @@ function Home() {
 
                     <div className="home__rowThree">
                     <Carousel itemsToShow={4}>
-                        <div id='item1' className="card">
-                            Item
-                        </div>
-                        <div id='item2' className="card">
-                            Item
-                        </div >
-                        <div id='item3' className="card">
-                            Item
-                        </div>
-                        <div id='item4' className="card">
-                            Item
-                        </div>
-                        <div id='item5' className="card">
-                            Item
-                        </div>
-                        <div id='item6' className="card">
-                            Item
-                        </div>
-                        </Carousel>
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                        rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                            <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                    </Carousel>
                     </div>
 
                 </div>
@@ -200,42 +223,59 @@ function Home() {
                     </div>
 
                     <div className="home__row">
-                    <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                    <Carousel itemsToShow={4}>
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
                         rating={3} colors="Colors" />
-                     <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                     <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                     <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                     <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                    </div>
-                    <div className="home__row">
-                    <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                     <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
-                         <Product title='Mac Book'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                        rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                            <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
+                            rating={3} colors="Colors" />
+                    </Carousel>
                     </div>
 
                 </div>
-                <div className="home__sectionSix">
+                <div style={{"marginTop":"50px"}} className="home__sectionSix">
                     <div className="home__sectionTitle">
                         <h2>Featured Brands</h2>
                     </div>
 
-                    <div className="home__row">
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
+                    <div className="home__brands">
+                        <Carousel itemsToShow={5}>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-1_250x.png?v=1620276118" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-3_250x.png?v=1620276140" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-1_250x.png?v=1620276118" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-3_250x.png?v=1620276140" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-1_250x.png?v=1620276118" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-3_250x.png?v=1620276140" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-1_250x.png?v=1620276118" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/brands-custom-3_250x.png?v=1620276140" alt="" />
+                        </div>
+                        </Carousel>
                     </div>
 
                 </div>
@@ -245,20 +285,7 @@ function Home() {
                     </div>
 
                     <div className="home__row">
-                    <div className="card">
-                    <img src="https://www.w3schools.com/w3images/jeans3.jpg" alt="Denim Jeans" style={{"width":"100%"}} />
-                    <h1>Tailored Jeans</h1>
-                    <p className="price">$19.99</p>
-                    <p>Some text about the jeans..</p>
-                    <p><button>Add to Cart</button></p>
-                    </div>
-                    <div className="card">
-                    <img src="https://www.w3schools.com/w3images/jeans3.jpg" alt="Denim Jeans" style={{"width":"100%"}} />
-                    <h1>Tailored Jeans</h1>
-                    <p className="price">$19.99</p>
-                    <p>Some text about the jeans..</p>
-                    <p><button>Add to Cart</button></p>
-                    </div>
+                    
                     </div>
 
                 </div>

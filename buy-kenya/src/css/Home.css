@@ -23,19 +23,26 @@
   }
 
 
+.home__section{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
 .home__sectionTitle{
     display: flex;
     align-items: center;
 }
 
-  .home__sectionTwo h2{
-    font-family: Rubik;
+  h2{
     font-weight: 700;
     font-size: 20px;
     font-style: normal;
     line-height: 25px;
     color: #202020;
-    margin-left: 15px;
+    padding: 20px;
+    margin-left: 50px;
   }
 
 .home__sectionTwo, .home__sectionThree{
@@ -75,10 +82,27 @@
     display: flex;
     align-items: center;
 }
-
-.card{
-  min-width: 250px;
-  height: 250px;
-  background-color: aqua;
-  margin: 10px;
+.offers__container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.offer__item{
+  padding: 5px;
+  margin: 5px;
+}
+.offer__item > img{
+  width: 200px;
+  height: 200px;
+}
+.slide__show img{
+  width: 100%;
+}
+.collections__container{
+  padding: 10px;
+}
+.home__brands{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
 }
