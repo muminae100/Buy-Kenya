@@ -1,42 +1,110 @@
-.home{
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-.home__row{
-    display: flex;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-.home__section{
-    display: flex;
-    flex-wrap: wrap;
+
+/* coupon */
+.coupon {
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 80%;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+  }
+  
+  .coupon__container {
+    padding: 2px 16px;
+    background-color: #f1f1f1;
+  }
+  
+  .promo {
+    background: #ccc;
+    padding: 3px;
+  }
+  
+  .expire {
+    color: red;
+  }
+
+  /* product card */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
     width: 100%;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-.home__section > div{
-    margin: 10px;
-    padding: 10px;
-}
-.collections__container{
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+
+
+
+
+.home__sectionTitle{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 10%;
-    flex: 0.3;
+    align-items: center;
 }
 
-.carousel{
+  .home__sectionTwo h2{
+    font-family: Rubik;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 25px;
+    color: #202020;
+    margin-left: 15px;
+  }
+
+.home__sectionTwo, .home__sectionThree{
+    padding: 20px;
+} 
+.home__rowTwo, .home__rowThree{
     display: flex;
-    flex: 0.3;
+    align-items: center;
+    padding: 20px;
 }
-/* .offers__container{
+.home__categoryImageBox{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
-/* .offer__item{
+    flex-direction: column;
+    align-items: center;
     margin: 10px;
-} */
+    padding: 10px;
+    width: 250px;
+}  
+.home__categoryImageBox > img{
+    width: 100%;
+}
+.home__categoryImageBox > p{
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 20px;
+}
+.hot__deals{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #e10600;
+    margin-left: 10px;
+}
+.home__sectionTitleThree{
+    display: flex;
+    align-items: center;
+}

@@ -26,14 +26,6 @@ function Checkout() {
     const [disabled, setDisabled] = useState(true);
     const [clientSecret, setClientSecret] = useState(true);
 
-
-    const appearance = {
-        theme: 'night'
-      };
-      
-      // Pass the appearance object to the Elements instance
-    const elements = stripe.elements({clientSecret, appearance});
-
     useEffect(() => {
         const getClientSecret = async () =>{
             const response = await axios({

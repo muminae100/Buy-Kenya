@@ -5,12 +5,11 @@ import '../css/Order.css'
 import CurrencyFormat from 'react-currency-format';
 
 function Order({order}) {
-    //run npm install moment
 
     return (
         <div className="order">
             <h2>Order</h2>
-            <p>{moment.unix(order.data.created).format('MMMM Dd YYYY, h:mma')}</p>
+            <p>{order.data.created}</p>
             <p>{Order?.id}</p>
             {order.data.basket?.map(item =>(
                 <CartItem 
