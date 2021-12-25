@@ -42,7 +42,7 @@
     line-height: 25px;
     color: #202020;
     padding: 20px;
-    margin-left: 50px;
+    margin-left: 40px;
   }
 
 .home__sectionTwo, .home__sectionThree{
@@ -105,4 +105,50 @@
   padding: 20px;
   align-items: center;
   justify-content: space-between;
+}
+.home__electronics, .col2{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.col3{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.col3 > div{
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+}
+.col3 h3, .col3 p{
+  padding: 5px;
+}
+.col3__section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.electronics__bottom, .special__offers{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.electronics__bottom > div{
+  width: 400px;
+}
+.special__offers > div{
+  width: 400px;
+  margin: 10px;
+}
+.electronics__bottom img{
+  width: 100%;
+}
+.special__offers img{
+  width: 100%;
 }
