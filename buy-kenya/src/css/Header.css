@@ -5,7 +5,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #131921;
+    background-color: #fd6506;
+    /* background-color: #131921; */
 }
 .header__logo{
     width: 200px;
@@ -50,6 +51,7 @@
     position: absolute;
     top: -1;
     right: -1;
-    color: #cd9042;
+    /* color: #cd9042; */
     font-weight: 800;
+    color: white;
 }

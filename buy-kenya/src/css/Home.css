@@ -25,9 +25,8 @@
 
 .home__section{
   display: flex;
-  align-items: center;
   margin-bottom: 50px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .home__sectionTitle{
@@ -91,15 +90,36 @@
   margin: 5px;
 }
 .offer__item > img{
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 }
 .slide__show img{
   width: 100%;
 }
+.collections__header{
+  padding: 10px;
+  color: white;
+  background-color: #fd6506;
+  margin-left: 10px;
+  text-align: center;
+}
 .collections__container{
   padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10px;
 }
+.collections__item{
+  padding: 10px;
+  text-align: center;
+}
+.collections__item p{
+  margin-top: 5px;
+  
+}
+
 .home__brands{
   display: flex;
   padding: 20px;
@@ -108,9 +128,11 @@
 }
 .home__electronics, .col2{
   display: flex;
-  align-items: center;
   padding: 10px;
   flex-wrap: wrap;
+}
+.col2{
+  align-items: center;
 }
 .col3{
   display: flex;
@@ -133,11 +155,13 @@
 }
 .electronics__bottom, .special__offers{
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
+}
+.electronics__bottom{
+  align-items: center;
 }
 .electronics__bottom > div{
   width: 400px;

@@ -55,27 +55,63 @@ function Home() {
         <Header />
         <div className="home">
                 <div className="home__section">
-
-                <div style={{"width":"200px"}} className="collections__container">
+                    
+                <div style={{"width":"220px"}}>
+                <div className="collections__header">
+                    <h4>SHOP BY CATEGORIES</h4>
+                </div>
+                <div className="collections__container">
                     <div className="collections__item">
-                        <i className="fas fa-dumbbell"></i>
-                        <span>Sports</span>
+                        <i class="fas fa-volleyball-ball"></i>
+                        <p>Sports</p>
                     </div>
                     <div className="collections__item">
-                        <i className="fas fa-dumbbell"></i>
-                        <span>Sports</span>
+                        <i class="fas fa-tshirt"></i>
+                        <p>Fashion</p>
                     </div>
                     <div className="collections__item">
-                        <i className="fas fa-dumbbell"></i>
-                        <span>Sports</span>
+                        <i class="fas fa-seedling"></i>
+                        <p>Garden</p>
                     </div>
                     <div className="collections__item">
-                        <i className="fas fa-dumbbell"></i>
-                        <span>Sports</span>
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Phones</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-gamepad"></i>
+                        <p>Gaming</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-laptop"></i>
+                        <p>Computing</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-gift"></i>
+                        <p>Gifts</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-wine-bottle"></i>
+                        <p>Supermarket</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-tv"></i>
+                        <p>Electronics</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-pen"></i>
+                        <p>Office</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-chair"></i>
+                        <p>Furniture</p>
+                    </div>
+                    <div className="collections__item">
+                        <i class="fas fa-spray-can"></i>
+                        <p>Beauty</p>
                     </div>
                 </div>
-
-                <div style={{"width":"750px"}} className="slide__show">
+                </div>
+                <div style={{"width":"800px"}} className="slide__show">
                     <Carousel itemToShow={1}>
                     <div>
                         <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s3.jpg?v=1620186768" alt="" />
@@ -89,7 +125,7 @@ function Home() {
                     </Carousel>          
                 </div>
 
-                <div style={{"width":"450px"}} className="offers__container">
+                <div style={{"width":"400px"}} className="offers__container">
                     <div className="offer__item">
                         <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/b1.png?v=1620209222" alt="" />
                     </div>
@@ -107,18 +143,18 @@ function Home() {
                 </div>
                 <div className="home__sectionTwo">
                     <div className="home__sectionTwoTitle">
-                        <h2>Shop by Categories</h2>
+                        <h2>Shop by Collections</h2>
                     </div>
 
                     <div className="home__rowTwo">
                     <Carousel itemsToShow={6}>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-1_1024x1024_crop_center.png?v=1620208565" alt="" />
-                            <p>Televisions</p>
+                            <p>Mobile Phones</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-2_1024x1024_crop_center.png?v=1620208579" alt="" />
-                            <p>Televisions</p>
+                            <p>Laptops & Tablets</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-3_1024x1024_crop_center.png?v=1620209409" alt="" />
@@ -126,31 +162,31 @@ function Home() {
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-4_1024x1024_crop_center.png?v=1620209418" alt="" />
-                            <p>Televisions</p>
+                            <p>PCs & Accessories</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-5_1024x1024_crop_center.png?v=1620209431" alt="" />
-                            <p>Televisions</p>
+                            <p>Audio & Video</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
-                            <p>Televisions</p>
+                            <p>Gaming</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
-                            <p>Televisions</p>
+                            <p>Home Appliances</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
-                            <p>Televisions</p>
+                            <p>Kitchen Appliances</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
-                            <p>Televisions</p>
+                            <p>Cameras</p>
                         </div>
                         <div className="home__categoryImageBox">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
-                            <p>Televisions</p>
+                            <p>Shoes</p>
                         </div>
                     </Carousel>
                        

@@ -3,7 +3,7 @@ import '../css/Cart_item.css'
 import { useStateValue } from "../StateProvider"
 
 function CartItem({id, title, image, price,rating, colors, hideButton}) {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, wishlistbasket }, dispatch] = useStateValue();
     const removeFromBasket = () =>{
             dispatch({
                 type: 'REMOVE_FROM_BASKET',
@@ -12,6 +12,15 @@ function CartItem({id, title, image, price,rating, colors, hideButton}) {
                 },
             });
         
+    }
+    const removeFromWishList = () =>{
+        dispatch({
+            type: 'REMOVE_FROM_WISHLIST',
+            item: {
+                id: id,
+            },
+        });
+    
     }
 
     return (

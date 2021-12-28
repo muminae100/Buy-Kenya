@@ -3,7 +3,7 @@ import '../css/Product.css'
 import { useStateValue } from "../StateProvider"
 
 function Product({id, title, image, price, colors, rating}) {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, wishlistbasket }, dispatch] = useStateValue();
 
     const addToBasket = () =>{
         dispatch({
@@ -18,6 +18,21 @@ function Product({id, title, image, price, colors, rating}) {
             },
         });
     };
+
+    const addToWishList = () =>{
+        dispatch({
+            type: 'ADD_TO_WISHLIST',
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+                colors: colors,
+            },
+        });
+    };
+
 
     return (
     <div className="product">
