@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/Product.css'
 import { useStateValue } from "../StateProvider"
 
-function Product({id, title, image1,image2, price, colors, rating}) {
+function Product({id, title, image1,image2, price, colors, rating ,removeWish}) {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
 
     const addToBasket = () =>{
@@ -31,6 +31,15 @@ function Product({id, title, image1,image2, price, colors, rating}) {
                 rating: rating,
             },
         });
+    };
+    const removeFromWishList = () =>{
+        dispatch({
+            type: 'REMOVE_FROM_WISHLIST',
+            item: {
+                id: id,
+            },
+        });
+    
     };
 
 
@@ -65,8 +74,13 @@ function Product({id, title, image1,image2, price, colors, rating}) {
     <div className="product__color" style={{"backgroundColor": "beige"}}></div>
     <div className="product__color" style={{"background-color": "sandybrown"}}></div>
     <div className="product__color" style={{"background-color": "slategray"}}></div>
-    {/* <div className="product__color"><i style="font-size: 24px;color: gray" className="fa fa-heart"></i></div>  */}
     </div>
+    {removeWish?(
+        <button onClick={removeFromWishList}>Remove from wish list</button>
+    ): (
+        <button onClick={addToWishList}>Add to wish list</button>
+    )}
+   
 
     <button onClick={addToBasket} className="product__button">Add to cart</button>
 

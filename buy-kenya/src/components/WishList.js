@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import CartItem from './CartItem';
+import Product from './Product';
 import '../css/WishList.css'
 import { useStateValue } from "../StateProvider"
 
@@ -13,15 +13,17 @@ function WishList() {
         <Header />
         <div className="wishlist">
             <h2>My Wishlist</h2>
-            <div>
+            <div className="wishlist__items">
             {wishlistbasket.map(item => (
-                <CartItem 
+                <Product 
                 id = {item.id}
                 title={item.title}
-                image={item.image}
+                image1={item.image1}
+                image2={item.image2}
                 price={item.price}
                 rating={item.rating}
                 colors={item.colors}
+                removeWish
                 />
             ))}
             </div>

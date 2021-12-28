@@ -78,10 +78,16 @@ function Checkout() {
         <>
         <Header />
         <div className="checkout">
+            <div className="checkout__topTitle">
+            <span style={{"fontSize":"30px","fontWeight":"700"}}>
+                Checkout
+            </span>
+            <br />
+            <p><Link to="/cart">Go back to cart</Link></p>
+            </div>
+            
             <div className="checkout__container">
-                <h1>
-                    Checkout (<Link to="/cart">{basket?.length} items</Link>)
-                </h1>
+                
                 <div className="checkout__section">
                     <div className="checkout__title">
                         <h3>
@@ -128,7 +134,7 @@ function Checkout() {
                         <CurrencyFormat
                         renderText={(value) =>(
                             <div className="subtotal__total">
-                                <h3>Total</h3>
+                                <p>Total</p>
                                 <p><strong>{`${value}`}</strong></p>
                             </div>
                         ) }
@@ -138,7 +144,8 @@ function Checkout() {
                         thousandSeparator={true}
                         prefix={"$"}
                         />
-                        <button disabled={processing || disabled || succeeded}>
+                        <button style={{"backgroundColor":"#fd6506","padding":"10px","border":"none","color":"white","borderRadius":"5px"}} 
+                        disabled={processing || disabled || succeeded}>
                             <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                         </button>
 

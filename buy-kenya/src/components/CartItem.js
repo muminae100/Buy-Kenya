@@ -2,8 +2,8 @@ import React from 'react'
 import '../css/Cart_item.css'
 import { useStateValue } from "../StateProvider"
 
-function CartItem({id, title, image1,image2, price,rating, colors, hideButton}) {
-    const [{ basket, wishlistbasket }, dispatch] = useStateValue();
+function CartItem({id, title, image1,image2, price, rating, colors, hideButton}) {
+    const [{ basket }, dispatch] = useStateValue();
     const removeFromBasket = () =>{
             dispatch({
                 type: 'REMOVE_FROM_BASKET',
@@ -12,15 +12,6 @@ function CartItem({id, title, image1,image2, price,rating, colors, hideButton}) 
                 },
             });
         
-    }
-    const removeFromWishList = () =>{
-        dispatch({
-            type: 'REMOVE_FROM_WISHLIST',
-            item: {
-                id: id,
-            },
-        });
-    
     }
 
     return (
