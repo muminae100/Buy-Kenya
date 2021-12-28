@@ -41,7 +41,7 @@
     line-height: 25px;
     color: #202020;
     padding: 20px;
-    margin-left: 40px;
+    margin-left: 20px;
   }
 
 .home__sectionTwo, .home__sectionThree{
@@ -175,4 +175,41 @@
 }
 .special__offers img{
   width: 100%;
+}
+.shop__withUs{
+  background-image: url('https://cdn.shopify.com/s/files/1/0064/4435/1539/files/bg_9859d6a0-04d2-4eb0-a314-1a3c55309bd8_1920x.jpg?v=1620377457');
+  background-repeat: repeat-x;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  margin: 50px 0;
+  padding: 20px;
+}
+.shop__withUs h2{
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 51px;
+}
+.home__sectionTenContent{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.home__sectionTenContent > div{
+  background-color: white;
+  padding: 10px;
+  margin: 5px;
+  width: 250px;
+}
+.home__sectionTenContent h3{
+  padding: 10px;
+}
+.large__icon{
+  padding: 10px;
+}
+.home__sectionTenContent p{
+  padding: 10px;
 }

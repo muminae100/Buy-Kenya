@@ -507,6 +507,61 @@ function Home() {
                     </div>
 
                 </div>
+                <div className="home__sectionTen">
+                    <div className="shop__withUs">
+                        <h2>Why shop with us?</h2>
+                        <div className="home__sectionTenContent">
+                            <div>
+                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div>
+                                    <h3>QUALITY AND SAVING</h3>
+                                </div>
+                                <div>
+                                    <p>Comprehensive quality control and affordable prices</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div>
+                                    <h3>QUALITY AND SAVING</h3>
+                                </div>
+                                <div>
+                                    <p>Comprehensive quality control and affordable prices</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div>
+                                    <h3>QUALITY AND SAVING</h3>
+                                </div>
+                                <div>
+                                    <p>Comprehensive quality control and affordable prices</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div>
+                                    <h3>QUALITY AND SAVING</h3>
+                                </div>
+                                <div>
+                                    <p>Comprehensive quality control and affordable prices</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div>
+                                    <h3>QUALITY AND SAVING</h3>
+                                </div>
+                                <div>
+                                    <p>Comprehensive quality control and affordable prices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="home__sectionEleven">
+                    
+                </div>
         </div>
         </>
     )
