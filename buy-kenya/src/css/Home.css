@@ -213,3 +213,59 @@
 .home__sectionTenContent p{
   padding: 10px;
 }
+
+/* subscribe form */
+
+.wrapper {
+  width: 100%;
+}
+
+.fas.fa-envelope {
+  color: #fff;
+  font-size: 2rem;
+  background: #333;
+  padding: 1rem;
+  border-radius: 100%;
+  margin: 0 0 1rem 0;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h3 {
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.card-content p {
+  font-size: .8rem;
+  margin: 0 0 2rem 0;
+  padding: 10px;
+}
+
+input {
+  padding: .8rem 1rem;
+  width: 40%;
+  border-radius: 5rem;
+  outline: none;
+  border: .1rem solid #d1d1d1;
+  font-size: .7rem;
+}
+
+.subscribe-btn {
+  padding: .8rem 2rem;
+  border-radius: 5rem;
+  background-color: #fd6506;
+  color: #fff;
+  font-size: .7rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

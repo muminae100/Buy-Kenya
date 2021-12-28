@@ -559,8 +559,23 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="home__sectionEleven">
-                    
+                <div className="home__sectionEleven">                    
+                <div class="wrapper">
+                <form action="#" class="card-content">
+                    <div class="form__container">
+                    <div class="image">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <p>Get the latest updates on new products and upcoming sales</p>
+                    </div>
+                    <div class="form-input">
+                    <label for="email"></label>
+                    <input type="email" placeholder="Your Email" />
+                    <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                </form>
+                </div>
                 </div>
         </div>
         </>
