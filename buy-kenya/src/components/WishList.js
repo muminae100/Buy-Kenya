@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Header from './Header';
+import CartItem from './CartItem';
 import '../css/WishList.css'
 import { useStateValue } from "../StateProvider"
 
@@ -6,6 +8,8 @@ function WishList() {
     const [{ wishlistbasket }, dispatch] = useStateValue();
 
     return (
+        <>
+        <Header />
         <div className="wishlist">
             <h2>My Wishlist</h2>
             <div>
@@ -21,6 +25,7 @@ function WishList() {
             ))}
             </div>
         </div>
+        </>
     )
 }
 

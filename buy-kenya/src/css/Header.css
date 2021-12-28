@@ -3,15 +3,23 @@
     display: flex;
     align-items: center;
     position: sticky;
+    justify-content: space-between;
     top: 0;
     z-index: 100;
     background-color: #fd6506;
     /* background-color: #131921; */
 }
 .header__logo{
-    width: 200px;
-    object-fit: contain;
+    color: white;
     margin: 0 20px;
+    font-weight: 700;
+}
+.header__logo span{
+    font-size: 2rem;
+}
+.header__logo i{
+    font-size: 2rem;
+    margin: 0 10px;
 }
 .header__hotline{
     color: white;
@@ -20,14 +28,22 @@
 .header__search{
     display: flex;
     align-items: center;
-    flex: 1;
     margin: 0 20px;
 }
 .header__searchInput{
-    height: 12px;
-    padding: 10px;
-    border: none;
-    width: 100%;
+  padding: 10.5px;
+  font-size: 17px;
+  border: none;
+  width: 350px;
+}
+.header__search button{
+  float: right;
+  padding: 10px 15px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 .header__nav{
     display: flex;
@@ -48,6 +64,14 @@
     margin-right: 5px;
 }
 .header__basketCount{
+    position: absolute;
+    top: -1;
+    right: -1;
+    /* color: #cd9042; */
+    font-weight: 800;
+    color: white;
+}
+.header__wishlistCount{
     position: absolute;
     top: -1;
     right: -1;

@@ -196,7 +196,7 @@ function Home() {
                 </div>
 
                 <div className="home__sectionThree">
-                    <div style={{"padding":"20px","marginLeft":"35px"}} className="home__sectionTitleThree">
+                    <div style={{"padding":"20px","marginLeft":"15px"}} className="home__sectionTitleThree">
                         <i style={{"color":"#e10600","fontWeight":"700","fontSize":"20px"}} className="fas fa-fire"></i>
                         <h1 className="hot__deals">HOT DEALS</h1>
                         <div style={{"marginLeft":"20px","fontWeight":"700"}}>
@@ -513,7 +513,7 @@ function Home() {
                         <h2>Why shop with us?</h2>
                         <div className="home__sectionTenContent">
                             <div>
-                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div className="large__icon"><i className="fas fa-star"></i></div>
                                 <div>
                                     <h3>QUALITY AND SAVING</h3>
                                 </div>
@@ -522,39 +522,39 @@ function Home() {
                                 </div>
                             </div>
                             <div>
-                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div className="large__icon"><i className="fas fa-warehouse"></i></div>
                                 <div>
-                                    <h3>QUALITY AND SAVING</h3>
+                                    <h3>GLOBAL WAREHOUSE</h3>
                                 </div>
                                 <div>
-                                    <p>Comprehensive quality control and affordable prices</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="large__icon"><i className="fa fa-user"></i></div>
-                                <div>
-                                    <h3>QUALITY AND SAVING</h3>
-                                </div>
-                                <div>
-                                    <p>Comprehensive quality control and affordable prices</p>
+                                    <p>37 overseas warehouses</p>
                                 </div>
                             </div>
                             <div>
-                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div className="large__icon"><i className="fas fa-shuttle-van"></i></div>
                                 <div>
-                                    <h3>QUALITY AND SAVING</h3>
+                                    <h3>FAST SHIPPING</h3>
                                 </div>
                                 <div>
-                                    <p>Comprehensive quality control and affordable prices</p>
+                                    <p>Fast and convenient door to door delivery</p>
                                 </div>
                             </div>
                             <div>
-                                <div className="large__icon"><i className="fa fa-user"></i></div>
+                                <div className="large__icon"><i className="fas fa-shield-alt"></i></div>
                                 <div>
-                                    <h3>QUALITY AND SAVING</h3>
+                                    <h3>PAYMENT SECURITY</h3>
                                 </div>
                                 <div>
-                                    <p>Comprehensive quality control and affordable prices</p>
+                                    <p>More than 10 different secure payment methods</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="large__icon"><i className="fas fa-question"></i></div>
+                                <div>
+                                    <h3>HAVE QUESTIONS?</h3>
+                                </div>
+                                <div>
+                                    <p>24/7 Customer Service - We are here and happy to help!</p>
                                 </div>
                             </div>
                         </div>
@@ -572,7 +572,7 @@ function Home() {
                     </div>
                     <div class="form-input">
                     <label for="email"></label>
-                    <input type="email" placeholder="Your Email" />
+                    <input className="sub__input" type="email" placeholder="Your Email" />
                     <button class="subscribe-btn">Subscribe</button>
                     </div>
                 </form>
