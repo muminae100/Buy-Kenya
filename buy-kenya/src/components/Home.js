@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import Product from './Product'
+import Footer from './Footer'
 import '../css/Home.css'
 import Carousel from 'react-elastic-carousel';
 
@@ -577,6 +578,7 @@ function Home() {
                 </form>
                 </div>
                 </div>
+            <Footer />
         </div>
         </>
     )
