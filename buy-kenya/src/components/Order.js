@@ -1,12 +1,16 @@
 import React from 'react'
 import moment from "moment";
 import CartItem from './CartItem';
+import Header from './Header';
+import Footer from './Footer';
 import '../css/Order.css'
 import CurrencyFormat from 'react-currency-format';
 
 function Order({order}) {
 
     return (
+        <>
+        <Header />
         <div className="order">
             <h2>Order</h2>
             <p>{order.data.created}</p>
@@ -37,6 +41,8 @@ function Order({order}) {
 
 
         </div>
+        <Footer />
+        </>
     )
 }
 

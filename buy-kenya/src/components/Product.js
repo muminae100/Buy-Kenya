@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/Product.css'
 import { useStateValue } from "../StateProvider"
 
-function Product({id, title, image, price, colors, rating}) {
+function Product({id, title, image1,image2, price, colors, rating}) {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
 
     const addToBasket = () =>{
@@ -11,10 +11,10 @@ function Product({id, title, image, price, colors, rating}) {
             item: {
                 id: id,
                 title: title,
-                image: image,
+                image1: image1,
+                image2: image2,
                 price: price,
                 rating: rating,
-                colors: colors,
             },
         });
     };
@@ -25,10 +25,10 @@ function Product({id, title, image, price, colors, rating}) {
             item: {
                 id: id,
                 title: title,
-                image: image,
+                image1: image1,
+                image2: image2,
                 price: price,
                 rating: rating,
-                colors: colors,
             },
         });
     };
@@ -40,8 +40,8 @@ function Product({id, title, image, price, colors, rating}) {
     {/* <div className="product__label">Out of stock</div>  */}
 
     <div className="product__image figure">
-        <img className="Sirv image-main" src="https://demo.sirv.com/hc/Bose-700-a.jpg?w=10&colorize.color=efefef" data-src="https://demo.sirv.com/hc/Bose-700-a.jpg" />
-        <img className="Sirv image-hover" data-src="https://demo.sirv.com/hc/Bose-700-b.jpg" />
+        <img className="Sirv image-main" src={image1 + '?w=10&colorize.color=efefef'} data-src={image1} />
+        <img className="Sirv image-hover" data-src={image2} />
     </div>
 
     <div className="product__rating">
@@ -68,7 +68,7 @@ function Product({id, title, image, price, colors, rating}) {
     {/* <div className="product__color"><i style="font-size: 24px;color: gray" className="fa fa-heart"></i></div>  */}
     </div>
 
-    <button onClick={{addToBasket}} className="product__button">Add to cart</button>
+    <button onClick={addToBasket} className="product__button">Add to cart</button>
 
     </div>
 

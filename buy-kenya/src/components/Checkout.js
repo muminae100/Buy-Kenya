@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
+import Footer from './Footer'
 import CartItem from './CartItem'
 import '../css/Checkout.css'
 import { useStateValue } from "../StateProvider"
@@ -149,6 +150,7 @@ function Checkout() {
                 </div>
             </div>
         </div>
+        <Footer />
         </>
     )
 }

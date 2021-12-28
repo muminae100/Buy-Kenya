@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Footer from './Footer';
 import CartItem from './CartItem';
 import '../css/WishList.css'
 import { useStateValue } from "../StateProvider"
@@ -25,6 +26,7 @@ function WishList() {
             ))}
             </div>
         </div>
+        <Footer />
         </>
     )
 }

@@ -1,11 +1,12 @@
 .header{
-    height: 80px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     position: sticky;
     justify-content: space-between;
     top: 0;
     z-index: 100;
+    padding: 20px;
     background-color: #fd6506;
     /* background-color: #131921; */
 }

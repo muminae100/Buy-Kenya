@@ -1,11 +1,9 @@
 .subtotal{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
     border: 1px solid #dddddd;
     border-radius: 3px;
-    height: 100%;
 }
 .subtotal__itemsCount{
     padding: 15px;
