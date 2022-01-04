@@ -129,10 +129,18 @@
 .home__brands > div{
   padding: 10px;
 }
-
+.col1{
+  margin-top: 10px;
+}
+.col1 img{
+  width: 100%;
+  object-fit: contain;
+}
+.col1,.col2,.col3{
+  padding: 6px;
+}
 .home__electronics, .col2{
   display: flex;
-  padding: 10px;
   flex-wrap: wrap;
 }
 .col2{
@@ -141,7 +149,6 @@
 .col3{
   display: flex;
   flex-direction: column;
-  padding: 5px;
 }
 .col3 > div{
   background-color: white;

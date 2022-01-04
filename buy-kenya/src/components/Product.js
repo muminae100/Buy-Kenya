@@ -77,19 +77,20 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
         <small>$</small>
         <strong>{price}</strong>
     </p>
-
-
-    <div className="product__colors">
-    <div className="product__color" style={{"background-color": "black"}}></div>
-    <div className="product__color" style={{"backgroundColor": "beige"}}></div>
-    <div className="product__color" style={{"background-color": "sandybrown"}}></div>
-    <div className="product__color" style={{"background-color": "slategray"}}></div>
-    </div>
+    <div style={{"width":"100%","padding":"10px 0"}}>
+        
     {removeWish?(
         <button onClick={removeFromWishList}>Remove from wish list</button>
     ): (
-        <button onClick={addToWishList}>Add to wish list</button>
+        <button style={{"border":"none","padding":"5px","backgroundColor":"white"}} onClick={addToWishList}>
+            <i style={{"fontSize":"24px","color":"gray"}} className="fa fa-heart"></i>
+        </button>
     )}
+    <span style={{"padding":"5px"}}>
+        <i style={{"fontSize":"24px","color":"gray"}} className="fas fa-share-alt"></i>
+    </span>
+
+    </div>
     
     <button onClick={addToBasket} className="product__button">
     Add to cart
