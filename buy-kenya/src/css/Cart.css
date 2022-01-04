@@ -1,8 +1,6 @@
 .cart{
     display: flex;
     padding: 20px;
-    /* height: max-content; */
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 .cart__title{
@@ -16,6 +14,11 @@
 .cart__left{
     width: 900px;
     margin: 10px;
+}
+.cart__items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .cart__right{
     width: 400px;

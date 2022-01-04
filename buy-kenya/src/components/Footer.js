@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Footer.css'
+import { Link } from "react-router-dom"
 
 function Footer() {
     return (
@@ -34,7 +35,10 @@ function Footer() {
                 <p><a href="">Partners</a></p>
             </div>
             <div className="footer__right">
-                <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/logo-footer-2_bbdd9169-67eb-4773-94ee-077ccc1afe8c.png?v=1620377842" alt="" />
+                <div className="footer__logo">
+                    <span>Buy Kenya</span>
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
                 <div className="frs1">
                 <div>
                     <i className="fas fa-map-marker-alt"></i>

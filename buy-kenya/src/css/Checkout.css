@@ -4,15 +4,22 @@
     font-weight: 400;
 }
 .checkout__container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 40px;
-}
-.checkout__container > div{
-    width: 420px;
+    padding: 30px;
 }
 .checkout__section > div{
     padding: 10px;
+}
+.checkout__items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.checkout__bottom{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.checkout__bottom > div{
+    width: 40%;
+    margin: 10px;
 }

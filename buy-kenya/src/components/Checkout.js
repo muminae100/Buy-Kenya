@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import CartItem from './CartItem'
+import Product from './Product';
 import '../css/Checkout.css'
 import { useStateValue } from "../StateProvider"
 import { Link, useNavigate } from "react-router-dom"
@@ -91,6 +91,28 @@ function Checkout() {
                 <div className="checkout__section">
                     <div className="checkout__title">
                         <h3>
+                            Review items & delivery
+                        </h3>
+                    </div>
+                    <div className="checkout__items">
+                        {basket.map(item => (
+                            <Product 
+                            id = {item.id}
+                            title={item.title}
+                            image1={item.image1}
+                            image2={item.image2}
+                            price={item.price}
+                            rating={item.rating}
+                            colors={item.colors}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <br />
+                <div className="checkout__bottom">
+                <div className="checkout__section">
+                    <div className="checkout__title">
+                        <h3>
                             Delivery Address
                         </h3>
                     </div>
@@ -100,26 +122,6 @@ function Checkout() {
                         <p>Karen Town, Nairobi</p>
                     </div>
                 </div>
-                <div className="checkout__section">
-                    <div className="checkout__title">
-                        <h3>
-                            Review items & delivery
-                        </h3>
-                    </div>
-                    <div className="checkout__items">
-                        {basket.map(item => (
-                            <CartItem 
-                            id = {item.id}
-                            title={item.title}
-                            image={item.image}
-                            price={item.price}
-                            rating={item.rating}
-                            colors={item.colors}
-                            />
-                        ))}
-                    </div>
-                </div>
-                <br />
                 <div className="checkout__section">
                     <div className="checkout__title">
                         <h3>
@@ -155,6 +157,8 @@ function Checkout() {
                     </form>
                     </div>
                 </div>
+                </div>
+               
             </div>
         </div>
         <Footer />

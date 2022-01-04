@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from "moment";
-import CartItem from './CartItem';
+import Product from './Product';
 import Header from './Header';
 import Footer from './Footer';
 import '../css/Order.css'
@@ -16,10 +16,11 @@ function Order({order}) {
             <p>{order.data.created}</p>
             <p>{Order?.id}</p>
             {order.data.basket?.map(item =>(
-                <CartItem 
+                <Product 
                 id = {item.id}
                 title={item.title}
-                image={item.image}
+                image1={item.image1}
+                image2={item.image2}
                 price={item.price}
                 rating={item.rating}
                 hideButton

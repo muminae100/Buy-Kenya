@@ -36,19 +36,13 @@
   padding: 20px;
   margin: 20px 0 0 0;
 }
-.footer__right{
-  padding: 20px;
-}
-.footer__right > img{
-  padding: 0 10px;
-}
 .footer__right > div{
   padding: 5px;
   margin: 5px;
 }
 .frs1 i{
   padding: 5px;
-  margin: 10px;
+  margin: 10px 0;
   font-size: 16px;
 }
 .social-icons .fa {
@@ -58,4 +52,14 @@
   padding: 1rem;
   border-radius: 100%;
   margin: 8px;
+}
+.footer__logo{
+  font-weight: 700;
+}
+.footer__logo span{
+  font-size: 1.8rem;
+}
+.footer__logo i{
+  font-size: 1.8rem;
+  margin: 0 10px;
 }

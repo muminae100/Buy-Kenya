@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Subtotal from './Subtotal';
 import '../css/Cart.css';
-import CartItem from './CartItem';
+import Product from './Product';
 import { useStateValue } from "../StateProvider";
 
 function Cart() {
@@ -30,16 +30,19 @@ function Cart() {
                             </>
                         )}
                     </div>
+                    <div className="cart__items">
                     {basket.map(item => (
-                        <CartItem 
+                        <Product 
                         id = {item.id}
                         title={item.title}
-                        image={item.image}
+                        image1={item.image1}
+                        image2={item.image2}
                         price={item.price}
                         rating={item.rating}
                         colors={item.colors}
                         />
                     ))}
+                    </div>
 
                 </div>
 

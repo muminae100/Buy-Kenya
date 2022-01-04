@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/Product.css'
 import { useStateValue } from "../StateProvider"
 
-function Product({id, title, image1,image2, price, colors, rating ,removeWish}) {
+function Product({id, title, image1,image2, price, colors, rating ,removeWish, cartButton}) {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
 
     const addToBasket = () =>{
@@ -18,6 +18,16 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish}) 
             },
         });
     };
+
+    const removeFromBasket = () =>{
+        dispatch({
+            type: 'REMOVE_FROM_BASKET',
+            item: {
+                id: id,
+            },
+        });
+    
+    }
 
     const addToWishList = () =>{
         dispatch({
@@ -80,9 +90,10 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish}) 
     ): (
         <button onClick={addToWishList}>Add to wish list</button>
     )}
-   
-
-    <button onClick={addToBasket} className="product__button">Add to cart</button>
+    
+    <button onClick={addToBasket} className="product__button">
+    Add to cart
+    </button>
 
     </div>
 

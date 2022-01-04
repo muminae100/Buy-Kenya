@@ -174,21 +174,30 @@ function Home() {
                             <p>Gaming</p>
                         </div>
                         <div className="home__categoryImageBox">
-                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-fridge_1024x1024_crop_center.jpg?v=1616410888" alt="" />
                             <p>Home Appliances</p>
                         </div>
                         <div className="home__categoryImageBox">
-                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-microwave_1024x1024_crop_center.jpg?v=1616410900" alt="" />
                             <p>Kitchen Appliances</p>
                         </div>
                         <div className="home__categoryImageBox">
-                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-camera_1024x1024_crop_center.jpg?v=1616410914" alt="" />
                             <p>Cameras</p>
                         </div>
                         <div className="home__categoryImageBox">
-                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
-                            <p>Shoes</p>
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-headphone_1024x1024_crop_center.jpg?v=1616410951" alt="" />
+                            <p>Accessories</p>
                         </div>
+                        <div className="home__categoryImageBox">
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-kettle_1024x1024_crop_center.jpg?v=1616410925" alt="" />
+                            <p>Consumables</p>
+                        </div>
+                        <div className="home__categoryImageBox">
+                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-smart_1024x1024_crop_center.jpg?v=1616410939" alt="" />
+                            <p>Smart Homes</p>
+                        </div>
+
                     </Carousel>
                        
                     </div>
@@ -208,8 +217,12 @@ function Home() {
                         <Carousel itemsToShow={4}>
                         <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver And Gold @Core 500HZs'price={1000} image1="https://demo.sirv.com/hc/Bose-700-a.jpg"
                         rating={3} colors="Colors" image2="https://demo.sirv.com/hc/Bose-700-b.jpg" />
-                        <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
-                            rating={3} colors="Colors" />
+                        <Product 
+                        title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'
+                        price={1000} 
+                        image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-11-2_a1b33940-f66d-40b7-ae4b-d2ff12806c0a_360x.jpg?v=1616828238"
+                        rating={3} 
+                        colors="Colors" />
                         <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
                             rating={3} colors="Colors" />
                         <Product title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'price={1000} image="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-2_9fd4acb2-8ad0-4a73-9461-f3f76ddbe8c5_360x.jpg?v=1616831599"
