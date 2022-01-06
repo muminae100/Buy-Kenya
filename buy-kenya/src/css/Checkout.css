@@ -1,25 +1,94 @@
-.checkout__topTitle{
-    text-align: center;
-    padding: 20px;
-    font-weight: 400;
+.checkout{
+  padding: 8px;
+  font-size: 17px;
+  background-color: white;
 }
-.checkout__container{
-    padding: 30px;
+.checkout h2{
+  padding: 20px 0;  
 }
-.checkout__section > div{
-    padding: 10px;
+.checkout__row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
 }
-.checkout__items{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
 }
-.checkout__bottom{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
 }
-.checkout__bottom > div{
-    width: 40%;
-    margin: 10px;
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.checkout__container {
+  padding: 5px 20px 15px 20px;
+  border-radius: 3px;
+}
+
+.checkout__input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.checkout label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.checkout__iconContainer {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+.checkout__iconContainer i{
+  padding: 5px;
+}
+
+.checkout__btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.checkout__btn:hover {
+  background-color: #45a049;
+}
+
+span.checkout__price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .checkout__row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
 }

@@ -20,12 +20,7 @@ function Subtotal() {
                     <p>Items</p>
                     <p>{basket.length} item(s):</p>
                 </div>
-                <small className="subtotal__gift">
-                    <img style={{"width":"100px","height":"100px"}} 
-                    src="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/gift.jpg?v=1618299025"
-                    alt="" />
-                    <span>This order contains a gift</span>
-                </small>
+             
                 <div className="subtotal__total">
                     <p>Total</p>
                     <p><strong>{`${value}`}</strong></p>

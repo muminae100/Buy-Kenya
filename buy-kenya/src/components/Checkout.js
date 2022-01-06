@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import Product from './Product';
 import '../css/Checkout.css'
 import { useStateValue } from "../StateProvider"
 import { Link, useNavigate } from "react-router-dom"
@@ -77,59 +76,47 @@ function Checkout() {
     return (
         <>
         <Header />
+
         <div className="checkout">
-            <div className="checkout__topTitle">
-            <span style={{"fontSize":"30px","fontWeight":"700"}}>
-                Checkout
-            </span>
-            <br />
-            <p><Link to="/cart">Go back to cart</Link></p>
-            </div>
-            
+        <div className="checkout__row">
+
+          <div className="col-75">
             <div className="checkout__container">
-                
-                <div className="checkout__section">
-                    <div className="checkout__title">
-                        <h3>
-                            Review items & delivery
-                        </h3>
+
+              <form onSubmit={handleSubmit}>
+                <div className="checkout__row">
+                  <div className="col-50">
+                    <h2>Billing Address</h2>
+                    <label for="fname"><i className="fa fa-user"></i> Full Name</label>
+                    <input className="checkout__input" type="text" id="fname" name="firstname" placeholder="John M. Doe" required/>
+                    <label for="email"><i className="fa fa-envelope"></i> Email</label>
+                    <input className="checkout__input" type="text" id="email" name="email" placeholder="john@example.com" required/>
+                    <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
+                    <input className="checkout__input" type="text" id="adr" name="address" placeholder="542 W. 15th Street" required/>
+                    <label for="city"><i className="fa fa-institution"></i> City</label>
+                    <input className="checkout__input" type="text" id="city" name="city" placeholder="New York" required/>
+
+                    <div className="checkout__row">
+                      <div className="col-50">
+                        <label for="state">State</label>
+                        <input className="checkout__input" type="text" id="state" name="state" placeholder="NY" required/>
+                      </div>
+                      <div className="col-50">
+                        <label for="zip">Zip</label>
+                        <input className="checkout__input" type="text" id="zip" name="zip" placeholder="10001" required/>
+                      </div>
                     </div>
-                    <div className="checkout__items">
-                        {basket.map(item => (
-                            <Product 
-                            id = {item.id}
-                            title={item.title}
-                            image1={item.image1}
-                            image2={item.image2}
-                            price={item.price}
-                            rating={item.rating}
-                            colors={item.colors}
-                            />
-                        ))}
+                  </div>
+
+                  <div className="col-50">
+                    <h2>Payment</h2>
+                    <label for="fname">Accepted Cards</label>
+                    <div className="checkout__iconContainer">
+                      <i className="fa fa-cc-visa" style={{"color":"navy"}}></i>
+                      <i className="fa fa-cc-amex" style={{"color":"blue"}}></i>
+                      <i className="fa fa-cc-mastercard" style={{"color":"red"}}></i>
+                      <i className="fa fa-cc-discover" style={{"color":"orange"}}></i>
                     </div>
-                </div>
-                <br />
-                <div className="checkout__bottom">
-                <div className="checkout__section">
-                    <div className="checkout__title">
-                        <h3>
-                            Delivery Address
-                        </h3>
-                    </div>
-                    <div className="checkout__address">
-                        <p>{ user?.email }</p>
-                        <p>123 The Hub</p>
-                        <p>Karen Town, Nairobi</p>
-                    </div>
-                </div>
-                <div className="checkout__section">
-                    <div className="checkout__title">
-                        <h3>
-                            Payment method
-                        </h3>
-                    </div>
-                    <div className="checkout__details">
-                    <form onSubmit={handleSubmit}>
                         <CardElement onChange={handleChange} />
 
                         <div className="payment__priceContainer">
@@ -154,16 +141,67 @@ function Checkout() {
                         {error && <div>{error}</div>}
                         </div>
                         
-                    </form>
-                    </div>
+                  </div>
+                  
                 </div>
-                </div>
-               
+                <label>
+                  <input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
+                </label>
+                <label>
+                  <input type="checkbox" checked="checked" name="sameadr" /> 	Save this information for next time
+                </label>
+              </form>
+
+
             </div>
+          </div>
+
+
+          <div className="col-25">
+            <div className="checkout__container">
+              <h2>Review items 
+                <span className="checkout__price" style={{"color":"black"}}><i className="fa fa-shopping-cart"></i> 
+                <b>{basket?.length}</b>
+                </span>
+              </h2>
+              <div className="no__items">
+                        {basket?.length === 0 &&(
+                            <>
+                            <div><i className="fa fa-shopping-cart"></i></div>
+                            <p style={{"fontSize":"25px"}}>No items to review!</p>
+                            <p style={{"padding":"10px 0"}}><Link to="/">Start shopping</Link></p>
+                            </>
+                        )}
+                </div>
+              {basket?.length >=1 &&(
+                <>
+                 <p style={{"padding":"10px 0"}}><Link to="/cart">Go back to cart</Link></p>
+                  <div style={{"display":"flex","alignItems":"center","justifyContent":"space-between"}}>
+                    <h4>Product</h4>
+                    <h4>Price</h4>
+                  </div>
+                  <div>
+                  {basket.map(item => (
+                  <div style={{"display":"flex","alignItems":"center","justifyContent":"space-between"}}>
+                      <img style={{"width":"150px","height":"150px"}} src={item.image1} alt="" />
+                      <h3>${item.price}</h3>
+                  </div>           
+                  ))}
+                  </div>
+                  </>
+              )}
+             
+            </div>
+          </div>
+
         </div>
-        <Footer />
-        </>
-    )
+        </div>
+
+
+
+  <Footer />
+  </>
+  )
 }
 
 export default Checkout
