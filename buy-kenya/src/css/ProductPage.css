@@ -1,0 +1,40 @@
+.pp__upperContainer{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    background-color: white;
+    flex-wrap: wrap;
+}
+.pp__left,.pp__right{
+    padding: 10px;
+}
+.pp__left{
+    width: 600px;
+}
+.pp__right{
+    width: 600px;
+}
+.pp__right > div{
+    padding: 10px;
+    margin: 5px;
+}
+.pp__btn button{
+    background-color: white;
+    border: none;
+    color: #111;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 0;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    width: 100%;
+}
+.pp__btn button:hover{
+    background-color: #008CBA; 
+    color: white; 
+}

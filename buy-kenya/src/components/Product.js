@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../css/Product.css';
+import { Link } from 'react-router-dom';
 import { useStateValue } from "../StateProvider";
 
-function Product({id, title, image1,image2, price, colors, rating}) {
+function Product({id, title, image1,image2, price, rating}) {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
     const [isClicked, setIsClicked] = useState(false);
     const [addWish, setWishBtn] = useState(false)
@@ -63,11 +64,12 @@ function Product({id, title, image1,image2, price, colors, rating}) {
     <div className="product">
 
     {/* <div className="product__label">Out of stock</div>  */}
-
+    <Link to={`/product/${title}`}>
     <div className="product__image figure">
         <img className="Sirv image-main" src={image1 + '?w=10&colorize.color=efefef'} data-src={image1} alt="" />
         <img className="Sirv image-hover" data-src={image2} alt="" />
     </div>
+    </Link>
 
     <div className="product__rating">
     {Array(rating).fill().map((_, i) =>(

@@ -227,7 +227,6 @@ function Home() {
                         rating={3} 
                         colors="Colors" 
                         image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/48/538305/2.jpg?9363" 
-                        array
                         />
 
                         <Product 
