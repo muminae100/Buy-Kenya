@@ -5,8 +5,11 @@ import Product from './Product';
 import Footer from './Footer';
 import '../css/Home.css';
 import Carousel from 'react-elastic-carousel';
+import { useStateValue } from "../StateProvider"
 
 function Home() {
+    const [{ basket, wishlistbasket }, dispatch] = useStateValue();
+
     const calculateTimeLeft = () => {
         let year = new Date().getFullYear();
         const difference = +new Date(`12/31/${year}`) - +new Date();
@@ -221,8 +224,11 @@ function Home() {
                         title="Generic Bluetooth Headphones 5.0 Wireless Headphones LED Light Foldable-Black"
                         price={10} 
                         image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/48/538305/1.jpg?9363"
-                        rating={3} colors="Colors" 
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/48/538305/2.jpg?9363" />
+                        rating={3} 
+                        colors="Colors" 
+                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/48/538305/2.jpg?9363" 
+                        array
+                        />
 
                         <Product 
                         title="Vivo Y1s 6.22'' 32 GB + 2 GB (Dual SIM), 4030mAh - Aurora Blue"

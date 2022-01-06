@@ -1,8 +1,5 @@
 .wishlist{
     padding: 20px;
-}
-.wishlist__items{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
+    background-color: white;
 }

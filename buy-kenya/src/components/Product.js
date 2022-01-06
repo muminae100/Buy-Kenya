@@ -1,9 +1,11 @@
-import React from 'react'
-import '../css/Product.css'
-import { useStateValue } from "../StateProvider"
+import React, { useState } from 'react';
+import '../css/Product.css';
+import { useStateValue } from "../StateProvider";
 
-function Product({id, title, image1,image2, price, colors, rating ,removeWish, cartButton}) {
+function Product({id, title, image1,image2, price, colors, rating}) {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
+    const [isClicked, setIsClicked] = useState(false);
+    const [addWish, setWishBtn] = useState(false)
 
     const addToBasket = () =>{
         dispatch({
@@ -17,6 +19,7 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
                 rating: rating,
             },
         });
+        setIsClicked(true);
     };
 
     const removeFromBasket = () =>{
@@ -26,8 +29,9 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
                 id: id,
             },
         });
+        setIsClicked(false) ;
     
-    }
+    };
 
     const addToWishList = () =>{
         dispatch({
@@ -41,6 +45,7 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
                 rating: rating,
             },
         });
+        setWishBtn(!addWish);
     };
     const removeFromWishList = () =>{
         dispatch({
@@ -49,6 +54,7 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
                 id: id,
             },
         });
+        setWishBtn(!addWish);
     
     };
 
@@ -59,8 +65,8 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
     {/* <div className="product__label">Out of stock</div>  */}
 
     <div className="product__image figure">
-        <img className="Sirv image-main" src={image1 + '?w=10&colorize.color=efefef'} data-src={image1} />
-        <img className="Sirv image-hover" data-src={image2} />
+        <img className="Sirv image-main" src={image1 + '?w=10&colorize.color=efefef'} data-src={image1} alt="" />
+        <img className="Sirv image-hover" data-src={image2} alt="" />
     </div>
 
     <div className="product__rating">
@@ -79,11 +85,13 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
     </p>
     <div style={{"width":"100%","padding":"10px 0"}}>
         
-    {removeWish?(
-        <button onClick={removeFromWishList}>Remove from wish list</button>
+    {addWish?(
+        <button style={{"border":"none","padding":"5px","backgroundColor":"white"}} onClick={removeFromWishList}>
+        <i style={{"fontSize":"24px","color":"red"}} className="fa fa-heart"></i>
+        </button>
     ): (
         <button style={{"border":"none","padding":"5px","backgroundColor":"white"}} onClick={addToWishList}>
-            <i style={{"fontSize":"24px","color":"gray"}} className="fa fa-heart"></i>
+            <i style={{"fontSize":"24px","color":"gray"}} className="far fa-heart"></i>
         </button>
     )}
     <span style={{"padding":"5px"}}>
@@ -91,10 +99,15 @@ function Product({id, title, image1,image2, price, colors, rating ,removeWish, c
     </span>
 
     </div>
-    
-    <button onClick={addToBasket} className="product__button">
-    Add to cart
-    </button>
+        {isClicked?(
+            <button onClick={removeFromBasket} className="product__button">
+                Remove
+            </button>)
+        :(
+            <button onClick={addToBasket} className="product__button">
+                Add to cart
+            </button>
+        )}
 
     </div>
 

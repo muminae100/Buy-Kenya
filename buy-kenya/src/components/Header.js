@@ -36,7 +36,7 @@ function Header() {
                 <Link to={"/wishlist"}>
                 <div className="header__option">
                     <span className="header__optionContentOne">
-                        <i style={{"fontSize":"32px","position":"relative","padding":"5px"}} className="fa fa-heart"></i>
+                        <i style={{"fontSize":"32px","position":"relative","padding":"5px"}} className="far fa-heart"></i>
                         <span className="header__wishlistCount">{wishlistbasket?.length}</span>
                     </span>
                 </div>

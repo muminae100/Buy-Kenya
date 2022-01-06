@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Subtotal from './Subtotal';
 import '../css/Cart.css';
-import Product from './Product';
+import CartItem from './CartItem';
 import { useStateValue } from "../StateProvider";
 
 function Cart() {
@@ -15,9 +15,6 @@ function Cart() {
         <Header />
         <div className="cart">
             <div className="cart__left">
-
-                <img className="cart__ad" 
-                src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/banner-custom-home-2_1920x.png?v=1620189483" alt="" />
                 <div>
                     <h2 className="cart__title">
                         My Cart
@@ -31,8 +28,19 @@ function Cart() {
                         )}
                     </div>
                     <div className="cart__items">
-                    {basket.map(item => (
-                        <Product 
+                    <div className="shopping-cart">
+        
+                    {basket?.length >= 1 &&(
+                      <>
+                        <div className="products__labels">
+                        <p></p>
+                        <h3>Product</h3>
+                        <h3>Title</h3>
+                        <h3>Quantity</h3>
+                        <h3>Price</h3>
+                      </div>
+                      {basket.map(item => (
+                        <CartItem 
                         id = {item.id}
                         title={item.title}
                         image1={item.image1}
@@ -42,7 +50,13 @@ function Cart() {
                         colors={item.colors}
                         />
                     ))}
-                    </div>
+                      
+                    </>
+                    )}
+                    
+                  </div>
+
+                  </div>
 
                 </div>
 
@@ -53,6 +67,7 @@ function Cart() {
             </div>
 
         </div>
+
         <Footer />
         </>
     )
