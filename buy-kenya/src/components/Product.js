@@ -6,7 +6,8 @@ import { useStateValue } from "../StateProvider";
 function Product({id, title, image1,image2, price, rating}) {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
     const [isClicked, setIsClicked] = useState(false);
-    const [addWish, setWishBtn] = useState(false)
+    const [addWish, setWishBtn] = useState(false);
+
 
     const addToBasket = () =>{
         dispatch({
@@ -77,8 +78,9 @@ function Product({id, title, image1,image2, price, rating}) {
     )) }
     </div>
 
-
+    <Link to={`/product/${id}`}>
     <p className="product__title">{title}</p>
+    </Link>
 
 
     <p className="product__price">
@@ -110,7 +112,7 @@ function Product({id, title, image1,image2, price, rating}) {
                 Add to cart
             </button>
         )}
-
+        
     </div>
 
     )

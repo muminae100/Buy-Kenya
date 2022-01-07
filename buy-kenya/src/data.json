@@ -9,11 +9,12 @@
         "brand":"sony",
         "description":"Model: 07SVersion: V5.0 + EDRFrequency response: 20Hz-20KHzOutput power: 40mWTransmission distance: 10-30mSignal to noise ratio: 85dbDistortion: 1%Battery capacity: 3.7v/400mahCharging time: 1-2 hoursPlayback time: maximum volume 11 hoursInterface: 3.5mn audio port, t-bayonet, USB2.",
         "category":"headphones",
+        "collection":"electronics",
         "price":10,
         "rating":3,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":2,
@@ -25,11 +26,12 @@
         "brand":"vivo",
         "description":"The phone comes with a 6.22-inch touchscreen display with a resolution of 720x1600 pixels. Vivo Y1s is powered by an Quad-core MediaTek Helio P35 (MT6765) processor. It comes with 2GB of RAM. The Vivo Y1s runs on Android 10 and is powered by a 4030mAh non-removable battery.",
         "category":"phones",
+        "collection":"electronics",
         "price":100,
         "rating":4,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":3,
@@ -41,11 +43,12 @@
         "brand":"hp",
         "description":"d EliteBook 8460 14 Intel Core i5 4GB, 500GB - Silver This is a strong HP Refurbished EliteBook 8460 14 Intel Core i5 4GB, 500GB - Silver performance laptop that has stylish design and meets durability standards. Its also attractive and feature-packed business laptop.",
         "category":"laptops",
+        "collection":"electronics",
         "price":300,
         "rating":4,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":4,
@@ -57,11 +60,12 @@
         "brand":"sony",
         "description":"Revolutionary features like the touch pad, integrated light bar, and built-in speaker offer exciting new ways to experience and interact with your games, and the 3.5mm audio jack offers a practical personal audio solution for gamers who want to listen to their games in private.",
         "category":"ps4 pads",
+        "collection":"electronics",
         "price":55,
         "rating":4,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":5,
@@ -73,10 +77,12 @@
         "brand":"samsung",
         "description":"The VITRON 32 inch, HD Smart Android LED TV features sharply and vividly conveys the color of the image making it true to life as you view it. Enjoy access to Youtube, Netflix, Facebook and many more apps with ease. It carries a powerful multi-surround sound effect the increases the excitement and takes your normal sports watching a pleasurable experience.",
         "category":"televisions",
+        "collection":"electronics",
         "price":300,
         "rating":4,
-        "hotdeal":1,
-        "featured":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":6,
@@ -88,11 +94,12 @@
         "brand":"sony",
         "description":"",
         "category":"subwoofers",
+        "collection":"electronics",
         "price":66,
         "rating":5,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":7,
@@ -104,11 +111,12 @@
         "brand":"apple",
         "description":"",
         "category":"phones",
+        "collection":"electronics",
         "price":410,
         "rating":4,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":8,
@@ -120,11 +128,12 @@
         "brand":"samsung",
         "description":"",
         "category":"phones",
+        "collection":"electronics",
         "price":382,
         "rating":4,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":9,
@@ -135,12 +144,13 @@
         "image4":"",
         "brand":"",
         "description":"",
-        "category":"",
+        "category":"home_appliances",
+        "collection":"electronics",
         "price":8,
         "rating":3,
-        "hotdeal":1,
-        "featured":0,
-        "recommended":0
+        "hotdeal":true,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":10,
@@ -151,12 +161,13 @@
         "image4":"",
         "brand":"sony",
         "description":"",
-        "category":"mouse",
+        "category":"gaming",
+        "collection":"electronics",
         "price":3,
         "rating":3,
-        "hotdeal":0,
-        "featured":1,
-        "recommended":0
+        "hotdeal":false,
+        "featured":true,
+        "recommended":false
     },
     {
         "id":11,
@@ -168,11 +179,12 @@
         "brand":"sony",
         "description":"",
         "category":"watches",
+        "collection":"electronics",
         "price":5,
         "rating":4,
-        "hotdeal":0,
-        "featured":1,
-        "recommended":0
+        "hotdeal":false,
+        "featured":true,
+        "recommended":false
     },
     {
         "id":12,
@@ -183,12 +195,13 @@
         "image4":"",
         "brand":"sony",
         "description":"",
-        "category":"",
+        "category":"accessories",
+        "collection":"electronics",
         "price":399,
         "rating":5,
-        "hotdeal":0,
-        "featured":1,
-        "recommended":0
+        "hotdeal":false,
+        "featured":true,
+        "recommended":false
     },
     {
         "id":13,
@@ -199,12 +212,13 @@
         "image4":"",
         "brand":"apple",
         "description":"",
-        "category":"phones",
+        "category":"accessories",
+        "collection":"electronics",
         "price":4,
         "rating":5,
-        "hotdeal":0,
-        "featured":1,
-        "recommended":0
+        "hotdeal":false,
+        "featured":true,
+        "recommended":false
     },
     {
         "id":14,
@@ -215,12 +229,13 @@
         "image4":"",
         "brand":"sony",
         "description":"",
-        "category":"headphones",
+        "category":"accessories",
+        "collection":"electronics",
         "price":8,
         "rating":4,
-        "hotdeal":0,
-        "featured":1,
-        "recommended":0
+        "hotdeal":false,
+        "featured":true,
+        "recommended":false
     },
     {
         "id":15,
@@ -231,12 +246,13 @@
         "image4":"",
         "brand":"apple",
         "description":"",
-        "category":"headphones",
+        "category":"accessories",
+        "collection":"electronics",
         "price":3,
         "rating":3,
-        "hotdeal":0,
-        "featured":1,
-        "recommended":0
+        "hotdeal":false,
+        "featured":true,
+        "recommended":false
     },
     {
         "id":16,
@@ -247,12 +263,13 @@
         "image4":"",
         "brand":"sony",
         "description":"",
-        "category":"blenders",
+        "category":"home_appliances",
+        "collection":"electronics",
         "price":31,
         "rating":4,
-        "hotdeal":0,
-        "featured":1,
-        "recommended":0
+        "hotdeal":false,
+        "featured":true,
+        "recommended":false
     },
     {
         "id":17,
@@ -263,12 +280,13 @@
         "image4":"",
         "brand":"ballantine",
         "description":"",
-        "category":"wine",
+        "category":"supermarket",
+        "collection":"consumables",
         "price":18,
         "rating":5,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":1
+        "hotdeal":false,
+        "featured":false,
+        "recommended":true
     },
     {
         "id":18,
@@ -279,12 +297,13 @@
         "image4":"",
         "brand":"bata",
         "description":"",
-        "category":"shoes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":20,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":1
+        "hotdeal":false,
+        "featured":false,
+        "recommended":true
     },
     {
         "id":19,
@@ -295,12 +314,13 @@
         "image4":"",
         "brand":"oppo",
         "description":"",
-        "category":"watches",
+        "category":"accessories",
+        "collection":"electronics",
         "price":11,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":1
+        "hotdeal":false,
+        "featured":false,
+        "recommended":true
     },
     {
         "id":20,
@@ -312,11 +332,12 @@
         "brand":"hisense",
         "description":"",
         "category":"phones",
+        "collection":"electronics",
         "price":53,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":1
+        "hotdeal":false,
+        "featured":false,
+        "recommended":true
     },
     {
         "id":21,
@@ -326,13 +347,14 @@
         "image3":"",
         "image4":"",
         "brand":"nivea",
-        "description":"",
-        "category":"rollon",
+        "description":"beauty",
+        "category":"fashion",
+        "collection":"electronics",
         "price":5,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":1
+        "hotdeal":false,
+        "featured":false,
+        "recommended":true
     },
     {
         "id":22,
@@ -343,12 +365,13 @@
         "image4":"",
         "brand":"bata",
         "description":"",
-        "category":"shoes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":6,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":1
+        "hotdeal":false,
+        "featured":false,
+        "recommended":true
     },
     {
         "id":23,
@@ -359,12 +382,13 @@
         "image4":"",
         "brand":"samsung",
         "description":"",
-        "category":"fridge",
+        "category":"home_appliance",
+        "collection":"electronics",
         "price":112,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":24,
@@ -375,12 +399,13 @@
         "image4":"",
         "brand":"samsung",
         "description":"",
-        "category":"fridge",
+        "category":"home_appliance",
+        "collection":"electronics",
         "price":537,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":25,
@@ -391,12 +416,12 @@
         "image4":"",
         "brand":"sony",
         "description":"",
-        "category":"microwave",
+        "category":"home_appliance",
         "price":83,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":26,
@@ -407,12 +432,13 @@
         "image4":"",
         "brand":"dell",
         "description":"",
-        "category":"computers",
+        "category":"office",
+        "collection":"electronics",
         "price":169,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":27,
@@ -423,12 +449,13 @@
         "image4":"",
         "brand":"sony",
         "description":"",
-        "category":"solar",
+        "category":"home_appliance",
+        "collection":"electronics",
         "price":91,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":28,
@@ -440,11 +467,12 @@
         "brand":"infinix",
         "description":"",
         "category":"televisions",
+        "collection":"electronics",
         "price":225,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":29,
@@ -455,12 +483,13 @@
         "image4":"",
         "brand":"sony",
         "description":"",
-        "category":"headphones",
+        "category":"accessories",
+        "collection":"electronics",
         "price":34,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":30,
@@ -471,12 +500,13 @@
         "image4":"",
         "brand":"dell",
         "description":"",
-        "category":"computers",
+        "category":"office",
+        "collection":"electronics",
         "price":800,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":31,
@@ -487,12 +517,13 @@
         "image4":"",
         "brand":"samsung",
         "description":"",
-        "category":"fridge",
+        "category":"home_appliance",
+        "collection":"electronics",
         "price":385,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":32,
@@ -503,12 +534,13 @@
         "image4":"",
         "brand":"gucci",
         "description":"",
-        "category":"clothes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":9,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":33,
@@ -519,12 +551,13 @@
         "image4":"",
         "brand":"gucci",
         "description":"",
-        "category":"clothes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":7,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":34,
@@ -535,12 +568,13 @@
         "image4":"",
         "brand":"gucci",
         "description":"",
-        "category":"clothes",
+        "category":"men_collection",
+        "collection":"electronics",
         "price":11,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":35,
@@ -551,12 +585,13 @@
         "image4":"",
         "brand":"gucci",
         "description":"",
-        "category":"clothes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":28,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":36,
@@ -567,12 +602,13 @@
         "image4":"",
         "brand":"gucci",
         "description":"",
-        "category":"clothes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":13,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":37,
@@ -583,12 +619,13 @@
         "image4":"",
         "brand":"gucci",
         "description":"",
-        "category":"clothes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":7,
         "rating":3,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":38,
@@ -599,12 +636,13 @@
         "image4":"",
         "brand":"africanwear",
         "description":"",
-        "category":"clothes",
+        "category":"women_collection",
+        "collection":"fashion",
         "price":31,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":39,
@@ -615,12 +653,13 @@
         "image4":"",
         "brand":"bata",
         "description":"",
-        "category":"shoes",
+        "category":"men_collection",
+        "collection":"fashion",
         "price":24,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     },
     {
         "id":40,
@@ -631,12 +670,13 @@
         "image4":"",
         "brand":"gucci",
         "description":"",
-        "category":"clothes",
+        "category":"women_collection",
+        "collection":"fashion",
         "price":9,
         "rating":4,
-        "hotdeal":0,
-        "featured":0,
-        "recommended":0
+        "hotdeal":false,
+        "featured":false,
+        "recommended":false
     }
 
 ]

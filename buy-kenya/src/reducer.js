@@ -26,7 +26,7 @@ const reducer = (state, action) =>{
                 basket: []
             };
             case 'REMOVE_FROM_BASKET':
-               const index = state.basket.findIndex(
+               const index = state.basket.filter(
                     (basketItem) => basketItem.id === action.id
                );
                let newBasket = [...state.basket];
@@ -41,7 +41,7 @@ const reducer = (state, action) =>{
                 basket: newBasket
             }
             case 'REMOVE_FROM_WISHLIST':
-               const index1 = state.wishlistbasket.findIndex(
+               const index1 = state.wishlistbasket.filter(
                     (wishListItem) => wishListItem.id === action.id
                );
                let newwishListBasket = [...state.wishlistbasket];

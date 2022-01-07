@@ -15,7 +15,7 @@ function ProductPage() {
     let {id} = useParams();
 
     
-    var product = Data.filter(item =>{
+    let product = Data.filter(item =>{
         return item.id == id;
     });
 
@@ -23,7 +23,7 @@ function ProductPage() {
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
-                id: product[0].id,
+                id: id,
                 title: product[0].title,
                 image1: product[0].image1,
                 image2: product[0].image2,
@@ -38,7 +38,7 @@ function ProductPage() {
         dispatch({
             type: 'REMOVE_FROM_BASKET',
             item: {
-                id: product[0].id,
+                id: id,
             },
         });
         setIsClicked(false) ;
@@ -49,7 +49,7 @@ function ProductPage() {
         dispatch({
             type: 'ADD_TO_WISHLIST',
             item: {
-                id: product[0].id,
+                id: id,
                 title: product[0].title,
                 image1: product[0].image1,
                 image2: product[0].image2,
@@ -63,7 +63,7 @@ function ProductPage() {
         dispatch({
             type: 'REMOVE_FROM_WISHLIST',
             item: {
-                id: product[0].id,
+                id: id,
             },
         });
         setWishBtn(!addWish);
@@ -98,9 +98,9 @@ function ProductPage() {
                     </h2>
                 </div>
                 <div className="pp__rating">
-                {/* {Array(rating).fill().map((_, i) =>(
+                {Array(product[0].rating).fill().map((_, i) =>(
                     <span><i style={{"color":"orange"}} className="fas fa-star"></i></span>
-                )) } */}
+                )) }
                 </div>
                 <div>
                 <p>

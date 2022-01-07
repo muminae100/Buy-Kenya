@@ -56,6 +56,16 @@ function Home() {
     //     { width: 1750, itemsToShow: 6 }
     //   ];
 
+    let hotdeals = Data.filter(item =>{
+        return item.hotdeal === true;
+    });
+    let featured = Data.filter(item =>{
+        return item.featured === true;
+    });
+    let recommended = Data.filter(item =>{
+        return item.recommended === true;
+    });
+
 
     return (
         <>
@@ -221,7 +231,7 @@ function Home() {
 
                     <div className="home__rowThree">
                         <Carousel itemsToShow={5}>
-                        {Data.map((item, index) =>(
+                        {hotdeals.map((item, index) =>(
                             <Product 
                             id={item.id}
                             title={item.title}
@@ -231,80 +241,6 @@ function Home() {
                             image2={item.image2}
                             />
                         ))}
-
-{/* 
-                        <Product 
-                        title="Generic Bluetooth Headphones 5.0 Wireless Headphones LED Light Foldable-Black"
-                        price={10} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/48/538305/1.jpg?9363"
-                        rating={3} 
-                        colors="Colors" 
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/48/538305/2.jpg?9363" 
-                        />
-
-                        <Product 
-                        title="Vivo Y1s 6.22'' 32 GB + 2 GB (Dual SIM), 4030mAh - Aurora Blue"
-                        price={220} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/50/481874/1.jpg?7065"
-                        image2="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-3-2_360x.jpg?v=1616829324"
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='HP Refurbished EliteBook 8460 14" Intel Core I5 4GB, 500GB - Silver'
-                        price={300} 
-                        image1="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-5_d76f9b0e-5aff-471b-8729-06886a7a1da8_360x.jpg?v=1617353588"
-                        image2="https://cdn.shopify.com/s/files/1/0064/4435/1539/products/product-laptop-1_52f05dfc-b5e1-423c-b7a7-e690dc200552_360x.jpg?v=1616831318" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title="Generic PS4 Pad DualShock 4 Wireless Controller Remote Video Gamepad"
-                        price={55} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/51/648784/1.jpg?5417"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/98/416784/1.jpg?5299"
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Vitron 32" Inch Smart Android Tv, Netflix, Youtube, Facebook'
-                        price={300} 
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/19/401255/1.jpg?1990"
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/80/831235/1.jpg?6944" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Vitron Subwoofer HOMETHEATRE- Sound Bar USB/FM/BT-9,000W'
-                        price={66} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/25/684633/1.jpg?8150"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/92/296672/1.jpg?7995" 
-                        rating={5} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Apple IPhone 8 Plus, 64GB ( Single SIM ), Space Grey'
-                        price={410} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/69/350582/1.jpg?7564"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/07/711541/1.jpg?9154" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Jumper EZpad 7 10.1 Inch Portable Metal Tablet With Intel'
-                        price={382} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/46/055025/1.jpg?1037"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/46/055025/3.jpg?1037" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Rashnik RN-1142 2.2L Electric Kettle Household Appliance'
-                        price={8} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/59/477784/1.jpg?1608"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/59/477784/2.jpg?1608" 
-                        rating={4} 
-                        colors="Colors" /> */}
 
                         </Carousel>
                         
@@ -318,62 +254,16 @@ function Home() {
 
                     <div className="home__rowThree">
                     <Carousel itemsToShow={5}>
-                        <Product 
-                        title='Generic Ultra Slim 2.4 GHz Optical Wireless Mouse'
-                        price={3} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/04/885691/1.jpg?4785"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/04/885691/5.jpg?4785" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Fashion Smart Ladies Quartz Watch + FREE Gift Box'
-                        price={5} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/11/741212/1.jpg?8068"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/11/741212/4.jpg?8068" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Jbl Xtreme 3 - Portable Bluetooth Speaker-Squad'
-                        price={399} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/42/098984/1.jpg?4911"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/42/098984/2.jpg?4911" 
-                        rating={5} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Generic Oil Painting Pattern Shockproof Protective Case For IPhone 13 Pro Max(Newspaper)'
-                        price={4} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/74/835355/1.jpg?0936"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/74/835355/1.jpg?0936" 
-                        rating={5} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Pangpai Wireless Bluetooth P15 Heaphone'
-                        price={8} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/56/45449/1.jpg?0192"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/56/45449/4.jpg?0192" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Fashion Silicone Protective Case Cover Storage Box For AirPods Pro 3 Bluetooth Earphone-Blue'
-                        price={3} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/74/948983/1.jpg?7829"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/74/948983/1.jpg?7829" 
-                        rating={3} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Rashnik NEW 3 IN 1 BLENDER (RN-1012)'
-                        price={31} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/12/021634/1.jpg?5148"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/12/021634/2.jpg?5148" 
-                        rating={4} 
-                        colors="Colors" />
-                        
+                    {featured.map((item, index) =>(
+                            <Product 
+                            id={item.id}
+                            title={item.title}
+                            price={item.price} 
+                            image1={item.image1}
+                            rating={item.rating} 
+                            image2={item.image2}
+                            />
+                        ))}
                     </Carousel>
                     </div>
 
@@ -386,54 +276,16 @@ function Home() {
                     <div className="home__row">
                     <Carousel itemsToShow={5}>
 
-                        <Product 
-                        title='Ballantine Blended Scotch Whiskey - 750 Ml.'
-                        price={18} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/68/347033/2.jpg?0407"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/68/347033/3.jpg?0407" 
-                        rating={5} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Fashion Mens Sneakers Big Size Running Shoes-Black'
-                        price={20} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/73/673613/1.jpg?4066"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/73/673613/1.jpg?4066" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Generic For OPPO Watch 46MM Smart Watch Metal Strap'
-                        price={11} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/45/368205/1.jpg?0563"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/45/368205/2.jpg?0563" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Hisense U40 Lite, 5", 8GB + 1GB RAM (Dual SIM), 2000mAh, Blue'
-                        price={53} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/09/283205/2.jpg?6666"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/09/283205/3.jpg?6666" 
-                        rating={3} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='NIVEA MEN Deep Antibacterial Anti-Perspirant Rollon,48h - 50ml (Pack Of 2)'
-                        price={5} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/30/710103/3.jpg?6224"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/30/710103/2.jpg?6224" 
-                        rating={3} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Bata Navy Unisex Sporty Shoe'
-                        price={6} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/11/015062/1.jpg?1570"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/11/015062/3.jpg?1570" 
-                        rating={3} 
-                        colors="Colors" />
-
+                        {recommended.map((item, index) =>(
+                            <Product 
+                            id={item.id}
+                            title={item.title}
+                            price={item.price} 
+                            image1={item.image1}
+                            rating={item.rating} 
+                            image2={item.image2}
+                            />
+                        ))}
                     </Carousel>
                     </div>
 
