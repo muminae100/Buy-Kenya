@@ -49,6 +49,7 @@ function App() {
         <Route exact path="/product/:id" element={<ProductPage/>} />
         <Route exact path="/collection/:name" element={<Collection/>} />
         <Route exact path="/category/:name" element={<Collection/>} />
+        <Route exact path="/brand/:name" element={<Collection/>} />
         <Route exact path="/checkout" element={<Elements stripe={promise}><Checkout/></Elements>} />
         <Route exact path="/orders" element={<Orders/>} />
         <Route path="*" element={<Home/>}/>

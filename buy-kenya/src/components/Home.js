@@ -56,15 +56,23 @@ function Home() {
     //     { width: 1750, itemsToShow: 6 }
     //   ];
 
-    let hotdeals = Data.filter(item =>{
-        return item.hotdeal === true;
-    });
-    let featured = Data.filter(item =>{
-        return item.featured === true;
-    });
-    let recommended = Data.filter(item =>{
-        return item.recommended === true;
-    });
+
+        let hotdeals = Data.filter(item =>{
+            return item.hotdeal === true;
+        });
+        let featured = Data.filter(item =>{
+            return item.featured === true;
+        });
+        let recommended = Data.filter(item =>{
+            return item.recommended === true;
+        });
+        let electronics = Data.filter(item =>{
+            return item.collection === "electronics";
+        });
+        let fashion = Data.filter(item =>{
+            return item.collection === "fashion";
+        });
+        
 
 
     return (
@@ -324,43 +332,39 @@ function Home() {
                         <Carousel itemsToShow={7}>
 
                         <div>
+                            <Link to="brand/apple">
                             <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Layer-1.png" alt="" />
+                            </Link>
                         </div>
 
                         <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Huawei.png" alt="" />
-                        </div>
-
-                        <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Infinix.png" alt="" />
-                        </div>
-
-                        <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Samsung.png" alt="" />
-                        </div>
-
-                        <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Jyf.png" alt="" />
-                        </div>
-
-                        <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Xiaomi.png" alt="" />
-                        </div>
-
-                        <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Oppo.png" alt="" />
-                        </div>
-
-                        <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Vivo.png" alt="" />
-                        </div>
-
-                        <div>
+                            <Link to="/brand/sony">
                             <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Sony.png" alt="" />
+                            </Link>
                         </div>
 
                         <div>
-                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Ulefone.png" alt="" />
+                            <Link to="brand/samsung">
+                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Samsung.png" alt="" />
+                            </Link>
+                        </div>
+
+                        <div>
+                            <Link to="/brand/infinix">
+                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Infinix.png" alt="" />
+                            </Link>
+                        </div>
+
+                        <div>
+                            <Link to="/brand/oppo">
+                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Oppo.png" alt="" />
+                            </Link>
+                        </div>
+
+                        <div>
+                            <Link to="/brand/vivo">
+                            <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Vivo.png" alt="" />
+                            </Link>
                         </div>
                         
                         </Carousel>
@@ -378,117 +382,100 @@ function Home() {
                         </div>
                         <div className="col2">
 
-                        <Product 
-                        title='Generic Adjustable Washing Hine F Base Refrigerator Undercarriage'
-                        price={112} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/18/448145/1.jpg?1494"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/18/448145/2.jpg?1494" 
-                        rating={3} 
-                        colors="Colors" />
+                        <Product
+                        id={electronics[0].id}
+                        title={electronics[0].title}
+                        price={electronics[0].price} 
+                        image1={electronics[0].image1}
+                        image2={electronics[0].image2}
+                        rating={electronics[0].rating} 
+                        />
 
-                        <Product 
-                        title='Armco ARF-NF301NV(DS) - 251L Refrigerator With Inverter Compressor'
-                        price={537} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/63/662454/1.jpg?5384"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/63/662454/1.jpg?5384" 
-                        rating={4} 
-                        colors="Colors" />
+                       <Product
+                        id={electronics[1].id}
+                        title={electronics[1].title}
+                        price={electronics[1].price} 
+                        image1={electronics[1].image1}
+                        image2={electronics[1].image2}
+                        rating={electronics[1].rating} 
+                        />
 
-                        <Product 
-                        title='Haier HP70J20AL-V2-Digital Glass Microwave Oven-20 Liters-Black'
-                        price={83} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/557392/1.jpg?4417"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/557392/1.jpg?4417" 
-                        rating={3} 
-                        colors="Colors" />
+                        <Product
+                        id={electronics[2].id}
+                        title={electronics[2].title}
+                        price={electronics[2].price} 
+                        image1={electronics[2].image1}
+                        image2={electronics[2].image2}
+                        rating={electronics[2].rating} 
+                        />
 
                         </div>
                         <div className="col3">
+                           
                             <div className="col3__section">
                                 <div>
                                 <h3>SMARTPHONES</h3>
+                                <Link to="category/phones">
                                 <p>Shop now</p>
+                                </Link>
                                 </div>
                                 <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Untitled-1_188abd45-7e7a-4d39-8228-c987076c576b_200x.jpg?v=1620376694" alt="" />
                             </div>
+                            
                             <div className="col3__section">
                                 <div>
                                 <h3>LAPTOPS</h3>
+                                <Link to="category/laptops">
                                 <p>Shop now</p>
+                                </Link>
                                 </div>
                                 <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Untitled-2_5f2ffb60-181b-4f3c-911b-8780b0b974bb_200x.jpg?v=1620376719" alt="" />
                             </div>
+                            
+                            
                             <div className="col3__section">
                                 <div>
                                 <h3>TELEVISIONS</h3>
+                                <Link to="category/televisions">
                                 <p>Shop now</p>
+                                </Link>
                                 </div>
                                 <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Untitled-3_93499d2a-e739-4f18-b48a-fbd10baad6df_200x.jpg?v=1620376733" alt="" />
                             </div>
+                            
                         </div>
                     </div>
                     <div>
                     <Carousel itemsToShow={5}>
 
-                        <Product 
-                        title='DELL Desktop Optiplex 7010 Intel Core I5 3.40GHz 4GB 500GB HDD Win 10- Certified Refurbished'
-                        price={169} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/70/052765/2.jpg?8290"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/70/052765/4.jpg?8290" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Solarmax 200 Watts Panel + Free Controller'
-                        price={91} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/83/964794/1.jpg?9463"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/83/964794/1.jpg?9463" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Infinix X1 32" Inch FRAMELESS Smart AndroidTV,In-Built Wi-Fi,Google'
-                        price={225} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/401733/1.jpg?2953"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/401733/2.jpg?2953" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Ausdom Active Noise Cancelling Wireless Headphone'
-                        price={34} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/60/472633/1.jpg?3247"
-                        image2="https://ke.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/60/472633/2.jpg?3247" 
-                        rating={3} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='WEBB GW24 23.8-Inch All-In-One Desktop Intel Core I5-10th Gen, 8GB, 256GB SSD, 1TB HDD'
-                        price={800} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/21/131925/1.jpg?4347"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/21/131925/1.jpg?4347" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Bruhm BFD 200MD - Double Door Refrigerator, 220L - Inox'
-                        price={385} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/130033/1.jpg?0397"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/130033/3.jpg?0397" 
-                        rating={4} 
-                        colors="Colors" />
+                        {electronics.map((item, index) =>(
+                            <Product 
+                            id={item.id}
+                            title={item.title}
+                            price={item.price} 
+                            image1={item.image1}
+                            rating={item.rating} 
+                            image2={item.image2}
+                            />
+                        ))}
 
                     </Carousel>
                     </div>
                     <div className="electronics__bottom">
                         <div>
+                            <Link to="category/accessories">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/5_6eb67a50-2f8f-4981-8fcf-a35335f6df27_1024x1024_crop_center.jpg?v=1620376793" alt="" />
+                            </Link>
                         </div>
                         <div>
+                            <Link to="category/accessories">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/6_91657c30-af99-4b66-a8b2-919324bc42f6_1024x1024_crop_center.jpg?v=1620376807" alt="" />
+                            </Link>
                         </div>
                         <div>
+                            <Link to="category/televisions">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/7_68c7303b-736e-4e7f-a7b0-286b9cf790b0_1024x1024_crop_center.jpg?v=1620376820" alt="" />
+                            </Link>
                         </div>
                     </div>
 
@@ -504,29 +491,35 @@ function Home() {
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/16_970x.jpg?v=1620375410" alt="" />
                         </div>
                         <div className="col2">
-                        <Product 
-                        title='Fashion Mens Vintage Printing Ethnic Short Sleeve Shirt'
-                        price={9} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/675033/1.jpg?0157"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/675033/2.jpg?0157" 
-                        rating={3} 
-                        colors="Colors" />
+                        
+                        
+                        <Product
+                        id={fashion[0].id}
+                        title={fashion[0].title}
+                        price={fashion[0].price} 
+                        image1={fashion[0].image1}
+                        image2={fashion[0].image2}
+                        rating={fashion[0].rating} 
+                        />
 
-                        <Product 
-                        title='Fashion Urbanai T-Shirt Builder - White & Black'
-                        price={7} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/04/782834/1.jpg?8834"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/245634/1.jpg?9774" 
-                        rating={3} 
-                        colors="Colors" />
+                       <Product
+                        id={fashion[1].id}
+                        title={fashion[1].title}
+                        price={fashion[1].price} 
+                        image1={fashion[1].image1}
+                        image2={fashion[1].image2}
+                        rating={fashion[1].rating} 
+                        />
 
-                        <Product 
-                        title='Fashion Mens Ethnic Short Sleeve Casual Blouse Tops'
-                        price={11} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/46/015434/1.jpg?0973"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/46/015434/4.jpg?0973" 
-                        rating={4} 
-                        colors="Colors" />
+                        <Product
+                        id={fashion[2].id}
+                        title={fashion[2].title}
+                        price={fashion[2].price} 
+                        image1={fashion[2].image1}
+                        image2={fashion[2].image2}
+                        rating={fashion[2].rating} 
+                        />
+
 
                         </div>
                         <div className="col3">
@@ -555,96 +548,40 @@ function Home() {
                     </div>
                     <div>
                     <Carousel itemsToShow={5}>
-                        <Product 
-                        title='Fashion Jungle Green Bomber Jacket'
-                        price={28} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/49/713072/1.jpg?3467"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/49/713072/1.jpg?3467" 
-                        rating={4} 
-                        colors="Colors" />
 
-                        <Product 
-                        title='Fashion Jeans Comfortable Slim Fit Casual & Formal Mens - Black'
-                        price={13} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/451132/1.jpg?8817"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/451132/1.jpg?8817" 
-                        rating={3} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Fashion Mens Breathable Mesh Shoes -Red'
-                        price={7} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/51/170243/1.jpg?0899"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/51/170243/5.jpg?0899" 
-                        rating={3} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Fashion New African Kitenge Fabric:- 100%cotton'
-                        price={31} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/143482/1.jpg?2056"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/143482/1.jpg?2056" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Liao Men Official Shoes-Brown'
-                        price={24} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/30/822451/1.jpg?8095"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/30/822451/3.jpg?8095" 
-                        rating={4} 
-                        colors="Colors" />
-
-                        <Product 
-                        title='Fashion YELLOW/BLUE DASHIKI UNISEX SHIRT'
-                        price={9} 
-                        image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/66/826872/1.jpg?4454"
-                        image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/66/826872/1.jpg?4454" 
-                        rating={4} 
-                        colors="Colors" />
+                        {fashion.map((item, index) =>(
+                            <Product 
+                            id={item.id}
+                            title={item.title}
+                            price={item.price} 
+                            image1={item.image1}
+                            rating={item.rating} 
+                            image2={item.image2}
+                            />
+                        ))}
 
                     </Carousel>
                     </div>
                     <div className="electronics__bottom">
                         <div>
+                            <Link to="category/men_collection">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/11_f68ad293-b6fb-4bfa-86ed-a9d117d94cee_1024x1024_crop_center.jpg?v=1620375877" alt="" />
+                            </Link>
                         </div>
                         <div>
+                            <Link to="category/women_collection">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/12_e9fa6ca1-68c4-44f6-8ffe-c721eba30260_1024x1024_crop_center.jpg?v=1620375891" alt="" />
+                            </Link>
                         </div>
                         <div>
+                            <Link to="category/children_collection">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/13_5d5eea5f-3c29-4a57-90af-8a85aad0598c_1024x1024_crop_center.jpg?v=1620375903" alt="" />
+                            </Link>
                         </div>
                     </div>
 
                 </div>
-                <div className="home__sectionNine">
-                    <div className="home__sectionTitle">
-                        <h2>Special offers</h2>
-                    </div>
-
-                    <div className="special__offers">
-                       <div>
-                           <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/10_249b4c1e-93dc-477f-a917-745150361a57_1024x1024_crop_center.jpg?v=1620376392" alt="" />
-                       </div>
-                       <div>
-                           <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/3_4c44d61c-45ec-479b-843d-06103dbd1d2d_1024x1024_crop_center.jpg?v=1620377071" alt="" />
-                       </div>
-                       <div>
-                           <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/7_68c7303b-736e-4e7f-a7b0-286b9cf790b0_1024x1024_crop_center.jpg?v=1620376820" alt="" />
-                       </div>
-                       <div>
-                           <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/2_b298ffde-3bef-4473-867c-7a7009fe17ee_1024x1024_crop_center.jpg?v=1620377056" alt="" />
-                       </div>
-                       <div>
-                           <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/8_ee8879b6-966e-45f3-95b3-4aac17f1897e_1024x1024_crop_center.jpg?v=1620376348" alt="" />
-                       </div>
-                       <div>
-                           <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/3_4c44d61c-45ec-479b-843d-06103dbd1d2d_1024x1024_crop_center.jpg?v=1620377071" alt="" />
-                       </div>
-                    </div>
-
-                </div>
+                
                 <div className="home__sectionTen">
                     <div className="shop__withUs">
                         <h2>Why shop with us?</h2>

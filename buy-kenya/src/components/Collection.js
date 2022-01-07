@@ -15,6 +15,9 @@ function Collection() {
     let categoryItems = Data.filter(item =>{
         return item.category === name;
     });
+    let brandItems = Data.filter(item =>{
+        return item.brand === name;
+    });
 
 
     return (
@@ -36,7 +39,7 @@ function Collection() {
             <div style={{"padding":"25px"}}>
                 <h4 style={{"width":"100%","padding":"10px"}}>All</h4>
             <div style={{"width":"100%","padding":"10px","borderBottom":"1px solid lightgray","borderTop":"1px solid lightgray"}}>
-                <p>{collectionItems?.length || categoryItems?.length} product(s) found</p>
+                <p>{collectionItems?.length || categoryItems?.length || brandItems?.length } product(s) found</p>
             </div>
             <div className="collection__right">
                         {collectionItems?.map((item, index) =>(
@@ -50,6 +53,16 @@ function Collection() {
                             />
                         ))}
                         {categoryItems?.map((item, index) =>(
+                            <Product 
+                            id={item.id}
+                            title={item.title}
+                            price={item.price} 
+                            image1={item.image1}
+                            rating={item.rating} 
+                            image2={item.image2}
+                            />
+                        ))}
+                        {brandItems?.map((item, index) =>(
                             <Product 
                             id={item.id}
                             title={item.title}
