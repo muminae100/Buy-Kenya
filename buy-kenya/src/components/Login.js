@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { collection, getDocs } from 'firebase/firestore/lite';
 import { auth, db } from './Firebase';
+import Footer from './Footer';
 
 function Login() {
     const navigate = useNavigate();
@@ -77,10 +78,11 @@ function Login() {
                 Please see our Privacy Notice, our Cookies Notice and our Interest Based Ads Notice.
             </p>
             <div style={{"margin":"10px","padding":"10px"}}>
-                <button style={{"width":"100%"}} onClick={register}>Register</button>
+                <button className="login-btn" style={{"width":"100%"}} onClick={register}>Register</button>
             </div>
         </div>
     </div>
+    <Footer />
         </>
     )
 }

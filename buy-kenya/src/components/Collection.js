@@ -27,12 +27,6 @@ function Collection() {
             <div className="collection__left">
                 <div style={{"marginBottom":"10px","borderBottom":"1px solid lightgray","padding":"10px"}}>
                 <h2 style={{"textTransform":"uppercase"}}>{name}</h2>
-                <p>Phones</p>
-                <p>Tablets</p>
-                <p>Televisions</p>
-                <p>Accessories</p>
-                <p>Gaming</p>
-                <p>Home appliances</p>
                 </div>
                 
             </div>

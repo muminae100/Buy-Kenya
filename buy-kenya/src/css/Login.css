@@ -1,3 +1,7 @@
+.login{
+  padding: 10px;
+  margin-top: 20px;
+}
 .login-form h1 {
     font-size: 36px;
     text-align: center;
@@ -54,14 +58,17 @@
       color: #666;
   }
   .login-form .login-btn {
-    background: #131921;
+    /* background: #131921; */
+    background-color: #fd6506;
     padding: 11px 50px;
-    border-color: #131921;
+    /* border-color: #131921; */
+    border-color: #fd6506;
     color: #fff;
     text-align: center;
     margin: 0 auto;
     font-size: 20px;
-    border: 1px solid #131921;
+    /* border: 1px solid #131921; */
+    border: 1px solid #fd6506;
     border-radius: 44px;
     width: 100%;
     height: 56px;

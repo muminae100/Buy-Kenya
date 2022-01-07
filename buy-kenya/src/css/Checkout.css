@@ -74,9 +74,6 @@
   font-size: 17px;
 }
 
-.checkout__btn:hover {
-  background-color: #45a049;
-}
 
 span.checkout__price {
   float: right;

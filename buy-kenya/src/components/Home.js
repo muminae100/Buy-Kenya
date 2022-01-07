@@ -112,7 +112,7 @@ function Home() {
                     </Link>
                     <Link to="category/televisions">
                     <div className="collections__item">
-                        <i class="fas fa-gift"></i>
+                        <i class="fas fa-tv"></i>
                         <p>Tvs</p>
                     </div>
                     </Link>
@@ -136,7 +136,7 @@ function Home() {
                     </Link>
                     <Link to="category/accessories">
                     <div className="collections__item">
-                        <i class="fas fa-chair"></i>
+                        <i class="fas fa-headphones"></i>
                         <p>Accessories</p>
                     </div>
                     </Link>
@@ -580,77 +580,6 @@ function Home() {
                         </div>
                     </div>
 
-                </div>
-                
-                <div className="home__sectionTen">
-                    <div className="shop__withUs">
-                        <h2>Why shop with us?</h2>
-                        <div className="home__sectionTenContent">
-                            <div>
-                                <div className="large__icon"><i className="fas fa-star"></i></div>
-                                <div>
-                                    <h3>QUALITY AND SAVING</h3>
-                                </div>
-                                <div>
-                                    <p>Comprehensive quality control and affordable prices</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="large__icon"><i className="fas fa-warehouse"></i></div>
-                                <div>
-                                    <h3>GLOBAL WAREHOUSE</h3>
-                                </div>
-                                <div>
-                                    <p>37 overseas warehouses</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="large__icon"><i className="fas fa-shuttle-van"></i></div>
-                                <div>
-                                    <h3>FAST SHIPPING</h3>
-                                </div>
-                                <div>
-                                    <p>Fast and convenient door to door delivery</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="large__icon"><i className="fas fa-shield-alt"></i></div>
-                                <div>
-                                    <h3>PAYMENT SECURITY</h3>
-                                </div>
-                                <div>
-                                    <p>More than 10 different secure payment methods</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="large__icon"><i className="fas fa-question"></i></div>
-                                <div>
-                                    <h3>HAVE QUESTIONS?</h3>
-                                </div>
-                                <div>
-                                    <p>24/7 Customer Service - We are here and happy to help!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="home__sectionEleven">                    
-                <div class="wrapper">
-                <form action="#" class="card-content">
-                    <div class="form__container">
-                    <div class="image">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-                    <p>Get the latest updates on new products and upcoming sales</p>
-                    </div>
-                    <div class="form-input">
-                    <label for="email"></label>
-                    <input className="sub__input" type="email" placeholder="Your Email" />
-                    <button class="subscribe-btn">Subscribe</button>
-                    </div>
-                </form>
-                </div>
                 </div>
             <Footer />
         </div>

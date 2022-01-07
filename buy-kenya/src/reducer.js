@@ -34,7 +34,7 @@ const reducer = (state, action) =>{
                     newBasket.splice(index, 1)
 
                }else{
-                    console.warn(`Cant remove product ${action.id}`)
+                    console.warn(`Cant remove product ${action.id} from cart`)
                }
             return {
                 ...state, 
@@ -49,7 +49,7 @@ const reducer = (state, action) =>{
                     newwishListBasket.splice(index1, 1)
 
                }else{
-                    console.warn(`Cant remove item ${action.id}`)
+                    console.warn(`Cant remove item ${action.id} from wishlist`)
                }
             return {
                 ...state, 
