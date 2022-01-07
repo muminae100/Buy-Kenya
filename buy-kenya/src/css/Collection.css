@@ -1,0 +1,22 @@
+.collection{
+    display: flex;
+    background-color: white;
+}
+.collection__left{
+    height: 100%;
+    padding: 25px;
+    width: 300px;
+}
+.collection__left p{
+    padding: 5px 0;
+}
+.collection__right{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+@media screen and (max-width:500px) {
+    .collection{
+        flex-wrap: wrap;
+    }
+}

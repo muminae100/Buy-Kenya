@@ -13,6 +13,7 @@ import { auth } from "./components/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useStateValue } from "./StateProvider"
 import ProductPage from "./components/ProductPage";
+import Collection from "./components/Collection";
 
 const promise = loadStripe('pk_test_51K9wHWEPTiQ984IpednLEVDN22SYjt4PU4ajhvz4u5VFtS5d4gvsGweerObJy0jWEu7VZ3W6MAUtECxcr8gs7Clx00ZsaKllnW');
 
@@ -46,6 +47,8 @@ function App() {
         <Route exact path="/cart" element={<Cart/>} />
         <Route exact path="/wishlist" element={<Wishlist/>} />
         <Route exact path="/product/:id" element={<ProductPage/>} />
+        <Route exact path="/collection/:name" element={<Collection/>} />
+        <Route exact path="/category/:name" element={<Collection/>} />
         <Route exact path="/checkout" element={<Elements stripe={promise}><Checkout/></Elements>} />
         <Route exact path="/orders" element={<Orders/>} />
         <Route path="*" element={<Home/>}/>

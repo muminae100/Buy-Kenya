@@ -16,7 +16,7 @@ function ProductPage() {
 
     
     let product = Data.filter(item =>{
-        return item.id == id;
+        return item.id === id;
     });
 
     const addToBasket = () =>{

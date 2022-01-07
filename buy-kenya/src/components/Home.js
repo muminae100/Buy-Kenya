@@ -78,54 +78,66 @@ function Home() {
                     <h4>SHOP BY CATEGORIES</h4>
                 </div>
                 <div className="collections__container">
-                    <div className="collections__item">
-                        <i class="fas fa-volleyball-ball"></i>
-                        <p>Sports</p>
-                    </div>
+                    <Link to="collection/fashion">
                     <div className="collections__item">
                         <i class="fas fa-tshirt"></i>
                         <p>Fashion</p>
                     </div>
-                    <div className="collections__item">
-                        <i class="fas fa-seedling"></i>
-                        <p>Garden</p>
-                    </div>
+                    </Link>
+                    <Link to="category/phones">
                     <div className="collections__item">
                         <i class="fas fa-mobile-alt"></i>
                         <p>Phones</p>
                     </div>
+                    </Link>
+                    <Link to="category/gaming">
                     <div className="collections__item">
                         <i class="fas fa-gamepad"></i>
                         <p>Gaming</p>
                     </div>
+                    </Link>
+                    <Link to="category/laptops">
                     <div className="collections__item">
                         <i class="fas fa-laptop"></i>
                         <p>Computing</p>
                     </div>
+                    </Link>
+                    <Link to="category/televisions">
                     <div className="collections__item">
                         <i class="fas fa-gift"></i>
-                        <p>Gifts</p>
+                        <p>Tvs</p>
                     </div>
+                    </Link>
+                    <Link to="collection/consumables">
                     <div className="collections__item">
                         <i class="fas fa-wine-bottle"></i>
-                        <p>Supermarket</p>
+                        <p>Consumables</p>
                     </div>
+                    </Link>
+                    <Link to="collection/electronics">
                     <div className="collections__item">
                         <i class="fas fa-tv"></i>
                         <p>Electronics</p>
                     </div>
+                    </Link>
+                    <Link to="category/office">
                     <div className="collections__item">
                         <i class="fas fa-pen"></i>
                         <p>Office</p>
                     </div>
+                    </Link>
+                    <Link to="category/accessories">
                     <div className="collections__item">
                         <i class="fas fa-chair"></i>
-                        <p>Furniture</p>
+                        <p>Accessories</p>
                     </div>
+                    </Link>
+                    <Link to="/category/beauty">
                     <div className="collections__item">
                         <i class="fas fa-spray-can"></i>
                         <p>Beauty</p>
                     </div>
+                    </Link>
                 </div>
                 </div>
                 <div style={{"width":"800px"}} className="slide__show">
@@ -165,53 +177,66 @@ function Home() {
 
                     <div className="home__rowTwo">
                     <Carousel itemsToShow={6}>
+                       
                         <div className="home__categoryImageBox">
+                            <Link to="category/phones">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-1_1024x1024_crop_center.png?v=1620208565" alt="" />
-                            <p>Mobile Phones</p>
+                            </Link>
+                            <p>Mobile Phones & Tablets</p>
                         </div>
+                       
                         <div className="home__categoryImageBox">
+                            <Link to="category/laptops">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-2_1024x1024_crop_center.png?v=1620208579" alt="" />
-                            <p>Laptops & Tablets</p>
+                            </Link>
+                            <p>Laptops</p>
                         </div>
                         <div className="home__categoryImageBox">
+                           <Link to="category/televisions">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-3_1024x1024_crop_center.png?v=1620209409" alt="" />
+                            </Link>
                             <p>Televisions</p>
                         </div>
+                        
+                        
                         <div className="home__categoryImageBox">
+                        <Link to="category/office">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-4_1024x1024_crop_center.png?v=1620209418" alt="" />
-                            <p>PCs & Accessories</p>
+                        </Link>
+                            <p>PCs</p>
                         </div>
+                     
                         <div className="home__categoryImageBox">
+                            <Link to="category/subwoofers">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-5_1024x1024_crop_center.png?v=1620209431" alt="" />
+                            </Link>
                             <p>Audio & Video</p>
                         </div>
+                        
                         <div className="home__categoryImageBox">
+                            <Link to="category/gaming">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-category-6_1024x1024_crop_center.png?v=1620209467" alt="" />
+                            </Link>
                             <p>Gaming</p>
                         </div>
                         <div className="home__categoryImageBox">
+                            <Link to="category/home_appliances">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-fridge_1024x1024_crop_center.jpg?v=1616410888" alt="" />
+                            </Link>
                             <p>Home Appliances</p>
                         </div>
+                        
                         <div className="home__categoryImageBox">
-                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-microwave_1024x1024_crop_center.jpg?v=1616410900" alt="" />
-                            <p>Kitchen Appliances</p>
-                        </div>
-                        <div className="home__categoryImageBox">
-                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-camera_1024x1024_crop_center.jpg?v=1616410914" alt="" />
-                            <p>Cameras</p>
-                        </div>
-                        <div className="home__categoryImageBox">
+                        <Link to="collection/accessories">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-headphone_1024x1024_crop_center.jpg?v=1616410951" alt="" />
+                        </Link>
                             <p>Accessories</p>
                         </div>
                         <div className="home__categoryImageBox">
+                            <Link to="collection/consumables">
                             <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-kettle_1024x1024_crop_center.jpg?v=1616410925" alt="" />
                             <p>Consumables</p>
-                        </div>
-                        <div className="home__categoryImageBox">
-                            <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-smart_1024x1024_crop_center.jpg?v=1616410939" alt="" />
-                            <p>Smart Homes</p>
+                            </Link>
                         </div>
 
                     </Carousel>
