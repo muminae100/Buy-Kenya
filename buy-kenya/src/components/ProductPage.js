@@ -5,24 +5,30 @@ import '../css/ProductPage.css';
 import Carousel from 'react-elastic-carousel';
 import { useStateValue } from "../StateProvider";
 import { useParams } from 'react-router-dom';
+import Data from '../data.json';
 
 
 function ProductPage() {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
     const [isClicked, setIsClicked] = useState(false);
     const [addWish, setWishBtn] = useState(false);
-    let {id, title, image1,image2, price, colors, rating} = useParams();
+    let {id} = useParams();
+
+    
+    var product = Data.filter(item =>{
+        return item.id == id;
+    });
 
     const addToBasket = () =>{
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
-                id: id,
-                title: title,
-                image1: image1,
-                image2: image2,
-                price: price,
-                rating: rating,
+                id: product[0].id,
+                title: product[0].title,
+                image1: product[0].image1,
+                image2: product[0].image2,
+                price: product[0].price,
+                rating: product[0].rating,
             },
         });
         setIsClicked(true);
@@ -32,7 +38,7 @@ function ProductPage() {
         dispatch({
             type: 'REMOVE_FROM_BASKET',
             item: {
-                id: id,
+                id: product[0].id,
             },
         });
         setIsClicked(false) ;
@@ -43,12 +49,12 @@ function ProductPage() {
         dispatch({
             type: 'ADD_TO_WISHLIST',
             item: {
-                id: id,
-                title: title,
-                image1: image1,
-                image2: image2,
-                price: price,
-                rating: rating,
+                id: product[0].id,
+                title: product[0].title,
+                image1: product[0].image1,
+                image2: product[0].image2,
+                price: product[0].price,
+                rating: product[0].rating,
             },
         });
         setWishBtn(!addWish);
@@ -57,12 +63,13 @@ function ProductPage() {
         dispatch({
             type: 'REMOVE_FROM_WISHLIST',
             item: {
-                id: id,
+                id: product[0].id,
             },
         });
         setWishBtn(!addWish);
     
     };
+   
     return (
         <>
         <Header />
@@ -71,36 +78,37 @@ function ProductPage() {
             <div className="pp__left">
                 <Carousel itemToShow={1}>
                     <div>
-                        <img src={image1} alt="" />
+                        <img src={product[0].image1} alt="" />
                     </div>
                     <div>
-                        <img src={image2} alt="" />
+                        <img src={product[0].image2} alt="" />
                     </div>
                     <div>
-                        <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/09/283205/1.jpg?6666" alt="" />
+                        <img src={product[0].image3} alt="" />
+                    </div>
+                    <div>
+                        <img src={product[0].image4} alt="" />
                     </div>
                 </Carousel>
             </div>
             <div className="pp__right">
                 <div>
                     <h2>
-                        {title}
+                    {product[0].title}
                     </h2>
                 </div>
                 <div className="pp__rating">
-                {Array(rating).fill().map((_, i) =>(
+                {/* {Array(rating).fill().map((_, i) =>(
                     <span><i style={{"color":"orange"}} className="fas fa-star"></i></span>
-                )) }
+                )) } */}
                 </div>
                 <div>
                 <p>
-                    Hisense U40 Lite smartphone is great value for money and has all the basic features including an 5MP rear 
-                    and 2MP selfie camera.  It has 1 GB of RAM, 8 GB of Internal memory and a 2000mAh battery. 
-                    Order for this Hisense U40 Lite Smartphone online from Jumia Kenya and have it delivered to your doorstep.
+                    {product[0].description}
                 </p>
                 </div>
                 <div className="pp__price">
-                    <h3>$ {price}</h3>
+                    <h3>$ {product[0].price}</h3>
                 </div>
                 <div className="pp__btn">
                 {isClicked?(
@@ -115,7 +123,7 @@ function ProductPage() {
                 </div>
                 <div>
                 {addWish?(
-                    <button style={{"border":"none","padding":"5px","backgroundColor":"white"}} onClick={removeFromWishList}>
+                    <button style={{"border":"none","padding":"5px","backgroundColor":"white"}} onClick={removeFromWishList} >
                     <i style={{"fontSize":"24px","color":"red"}} className="fa fa-heart"></i>
                     </button>
                 ): (

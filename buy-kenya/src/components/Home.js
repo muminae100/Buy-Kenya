@@ -5,7 +5,8 @@ import Product from './Product';
 import Footer from './Footer';
 import '../css/Home.css';
 import Carousel from 'react-elastic-carousel';
-import { useStateValue } from "../StateProvider"
+import { useStateValue } from "../StateProvider";
+import Data from '../data.json';
 
 function Home() {
     const [{ basket, wishlistbasket }, dispatch] = useStateValue();
@@ -54,6 +55,7 @@ function Home() {
     //     { width: 1450, itemsToShow: 5 },
     //     { width: 1750, itemsToShow: 6 }
     //   ];
+
 
     return (
         <>
@@ -219,7 +221,18 @@ function Home() {
 
                     <div className="home__rowThree">
                         <Carousel itemsToShow={5}>
+                        {Data.map((item, index) =>(
+                            <Product 
+                            id={item.id}
+                            title={item.title}
+                            price={item.price} 
+                            image1={item.image1}
+                            rating={item.rating} 
+                            image2={item.image2}
+                            />
+                        ))}
 
+{/* 
                         <Product 
                         title="Generic Bluetooth Headphones 5.0 Wireless Headphones LED Light Foldable-Black"
                         price={10} 
@@ -291,7 +304,7 @@ function Home() {
                         image1="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/59/477784/1.jpg?1608"
                         image2="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/59/477784/2.jpg?1608" 
                         rating={4} 
-                        colors="Colors" />
+                        colors="Colors" /> */}
 
                         </Carousel>
                         

@@ -64,7 +64,7 @@ function Product({id, title, image1,image2, price, rating}) {
     <div className="product">
 
     {/* <div className="product__label">Out of stock</div>  */}
-    <Link to={`/product/${title}`}>
+    <Link to={`/product/${id}`}>
     <div className="product__image figure">
         <img className="Sirv image-main" src={image1 + '?w=10&colorize.color=efefef'} data-src={image1} alt="" />
         <img className="Sirv image-hover" data-src={image2} alt="" />
