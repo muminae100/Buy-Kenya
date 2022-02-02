@@ -142,7 +142,7 @@ function Footer() {
                 <div>
                     <p><small>© 2021 Buy Kenya. All Rights Reserved.</small></p>
                 </div>
-                <div>
+                <div className="footer__bottom2Images">
                     <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/Visa_Inverted_x32.png?v=1615515285" alt="" />
                     <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/MasterCard_x32.png?v=1615515684" alt="" />
                     <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/American-Express_x32.png?v=1615515315" alt="" />

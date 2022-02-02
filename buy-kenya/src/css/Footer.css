@@ -22,10 +22,17 @@
 }
 .footer__bottom1{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
   margin: 10px 0;
+}
+@media screen and (max-width:800px) {
+  .footer__bottom1 img{
+    width: 100%;
+  } 
+  .footer__bottom2Images{
+    width: 100%;
+  }
 }
 .footer__bottom2{
   display: flex;
@@ -35,6 +42,9 @@
   background-color: white;
   padding: 20px;
   margin: 20px 0 0 0;
+}
+.footer__bottom2 > div{
+  padding: 10px;
 }
 .footer__right > div{
   padding: 5px;

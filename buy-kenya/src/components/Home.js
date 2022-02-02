@@ -4,7 +4,7 @@ import Header from './Header';
 import Product from './Product';
 import Footer from './Footer';
 import '../css/Home.css';
-import Carousel from 'react-elastic-carousel';
+// import Carousel from 'react-elastic-carousel';
 import { useStateValue } from "../StateProvider";
 import Data from '../data.json';
 
@@ -80,8 +80,7 @@ function Home() {
         <Header />
         <div className="home">
                 <div className="home__section">
-                    
-                <div style={{"width":"220px"}}>
+                <div className="home__categoriesContainer" style={{"width":"220px"}}>
                 <div className="collections__header">
                     <h4>SHOP BY CATEGORIES</h4>
                 </div>
@@ -148,18 +147,18 @@ function Home() {
                     </Link>
                 </div>
                 </div>
-                <div style={{"width":"800px"}} className="slide__show">
-                    <Carousel itemToShow={1}>
+                <div style={{"width":"600px"}} className="slide__show">
+                    
                     <div>
                         <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s3.jpg?v=1620186768" alt="" />
                     </div>
-                    <div>
+                    {/* <div>
                         <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s1_8b968f52-493e-4178-953b-dfb1597857fb.jpg?v=1638362212" alt="" />
                     </div>
                     <div>
                         <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s2.jpg?v=1620186744" alt="" />
-                    </div>
-                    </Carousel>          
+                    </div> */}
+                         
                 </div>
 
                 <div style={{"width":"400px"}} className="offers__container">
@@ -184,7 +183,6 @@ function Home() {
                     </div>
 
                     <div className="home__rowTwo">
-                    <Carousel itemsToShow={6}>
                        
                         <div className="home__categoryImageBox">
                             <Link to="category/phones">
@@ -246,8 +244,6 @@ function Home() {
                             <p>Consumables</p>
                             </Link>
                         </div>
-
-                    </Carousel>
                        
                     </div>
 
@@ -263,7 +259,7 @@ function Home() {
                     </div>
 
                     <div className="home__rowThree">
-                        <Carousel itemsToShow={5}>
+
                         {hotdeals.map((item, index) =>(
                             <Product 
                             id={item.id}
@@ -275,7 +271,6 @@ function Home() {
                             />
                         ))}
 
-                        </Carousel>
                         
                     </div>
 
@@ -286,7 +281,6 @@ function Home() {
                     </div>
 
                     <div className="home__rowThree">
-                    <Carousel itemsToShow={5}>
                     {featured.map((item, index) =>(
                             <Product 
                             id={item.id}
@@ -297,7 +291,6 @@ function Home() {
                             image2={item.image2}
                             />
                         ))}
-                    </Carousel>
                     </div>
 
                 </div>
@@ -306,9 +299,7 @@ function Home() {
                         <h2>Recommended For You</h2>
                     </div>
 
-                    <div className="home__row">
-                    <Carousel itemsToShow={5}>
-
+                    <div className="home__rowThree">
                         {recommended.map((item, index) =>(
                             <Product 
                             id={item.id}
@@ -319,7 +310,6 @@ function Home() {
                             image2={item.image2}
                             />
                         ))}
-                    </Carousel>
                     </div>
 
                 </div>
@@ -329,8 +319,6 @@ function Home() {
                     </div>
 
                     <div className="home__brands">
-                        <Carousel itemsToShow={7}>
-
                         <div>
                             <Link to="brand/apple">
                             <img src="https://ke.jumia.is/cms/TNG/L3/PhonesTablets/freelinks/Thumbnails/DT/Layer-1.png" alt="" />
@@ -367,7 +355,6 @@ function Home() {
                             </Link>
                         </div>
                         
-                        </Carousel>
                     </div>
 
                 </div>
@@ -445,8 +432,7 @@ function Home() {
                             
                         </div>
                     </div>
-                    <div>
-                    <Carousel itemsToShow={5}>
+                    <div className="home__rowThree">
 
                         {electronics.map((item, index) =>(
                             <Product 
@@ -459,7 +445,6 @@ function Home() {
                             />
                         ))}
 
-                    </Carousel>
                     </div>
                     <div className="electronics__bottom">
                         <div>
@@ -546,9 +531,8 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div>
-                    <Carousel itemsToShow={5}>
-
+                    <div className="home__rowThree">
+                   
                         {fashion.map((item, index) =>(
                             <Product 
                             id={item.id}
@@ -560,7 +544,6 @@ function Home() {
                             />
                         ))}
 
-                    </Carousel>
                     </div>
                     <div className="electronics__bottom">
                         <div>

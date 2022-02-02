@@ -35,7 +35,7 @@
   padding: 10.5px;
   font-size: 17px;
   border: none;
-  width: 350px;
+  width: auto;
 }
 .header__search button{
   float: right;
@@ -79,4 +79,16 @@
     /* color: #cd9042; */
     font-weight: 800;
     color: white;
+}
+.header__bars{
+    color: white;
+    display: none;
+}
+@media screen and (max-width:1000px) {
+    .header__hotline, .header__search, .header__nav{
+        display: none;
+    }
+    .header__bars{
+        display: block;
+    }
 }
