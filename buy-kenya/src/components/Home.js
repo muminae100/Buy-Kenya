@@ -147,7 +147,7 @@ function Home() {
                     </Link>
                 </div>
                 </div>
-                <div style={{"width":"600px"}} className="slide__show">
+                <div style={{"width":"600px","margin":"10px"}} className="slide__show">
                     
                     <div>
                         <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/s3.jpg?v=1620186768" alt="" />

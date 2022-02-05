@@ -106,11 +106,74 @@ function Checkout() {
                         <input className="checkout__input" type="text" id="zip" name="zip" placeholder="10001" required/>
                       </div>
                     </div>
+                    <label>
+                  <input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
+                  </label>
+                  <label>
+                    <input type="checkbox" checked="checked" name="sameadr" /> 	Save this information for next time
+                  </label>
+
                   </div>
 
                   <div className="col-50">
-                    <h2>Payment</h2>
-                    <label for="fname">Accepted Cards</label>
+                  <div className="checkout__container">
+                  <h2>Review items 
+                    <span className="checkout__price" style={{"color":"black"}}><i className="fa fa-shopping-cart"></i> 
+                    <b>{basket?.length}</b>
+                    </span>
+                  </h2>
+                  <div className="no__items">
+                            {basket?.length === 0 &&(
+                                <>
+                                <div><i className="fa fa-shopping-cart"></i></div>
+                                <p style={{"fontSize":"25px"}}>No items to review!</p>
+                                <p style={{"padding":"10px 0"}}><Link to="/">Start shopping</Link></p>
+                                </>
+                            )}
+                    </div>
+                  {basket?.length >=1 &&(
+                    <>
+                    <p style={{"padding":"10px"}}><Link to="/cart">Go back to cart</Link></p>
+                      <div className="checkout__t" style={{"display":"flex","alignItems":"center","justifyContent":"space-between","padding":"10px"}}>
+                        <h4>Product</h4>
+                        <h4>Title</h4>
+                        <h4>Price</h4>
+                      </div>
+                      <div>
+                      {basket.map(item => (
+                      // <div style={{"display":"flex","alignItems":"center","justifyContent":"space-between"}}>
+                      //     <img style={{"width":"150px","height":"150px"}} src={item.image1} alt="" />
+                      //     <h3>${item.price}</h3>
+                      // </div>           
+                      <div className="item">
+                        <div className="image">
+                          <img src={item.image1} alt="" />
+                        </div>
+                    
+                        <div className="description">
+                          {item.title}
+                        </div>
+                    
+                        {/* <div className="quantity">
+                          <button className="plus-btn" type="button" name="button">
+                          <i class="fas fa-plus"></i>
+                          </button>
+                          <input type="text" name="name" value="1" />
+                          <button className="minus-btn" type="button" name="button">
+                          <i class="fas fa-minus"></i>
+                          </button>
+                        </div> */}
+                    
+                        <div className="total-price">$ {item.price}</div>
+                      </div>
+                      ))}
+                      </div>
+                      </>
+                  )}
+                
+                </div>
+                  <h2>Payment</h2>
+                    {/* <label for="fname">Accepted Cards</label>
                     <div className="checkout__iconContainer">
                       <i className="fa fa-cc-visa" style={{"color":"navy"}}></i>
                       <i className="fa fa-cc-amex" style={{"color":"blue"}}></i>
@@ -139,58 +202,14 @@ function Checkout() {
                         </button>
 
                         {error && <div>{error}</div>}
-                        </div>
+                        </div> */}
                         
                   </div>
                   
                 </div>
-                <label>
-                  <input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
-                </label>
-                <label>
-                  <input type="checkbox" checked="checked" name="sameadr" /> 	Save this information for next time
-                </label>
               </form>
 
 
-            </div>
-          </div>
-
-
-          <div className="col-25">
-            <div className="checkout__container">
-              <h2>Review items 
-                <span className="checkout__price" style={{"color":"black"}}><i className="fa fa-shopping-cart"></i> 
-                <b>{basket?.length}</b>
-                </span>
-              </h2>
-              <div className="no__items">
-                        {basket?.length === 0 &&(
-                            <>
-                            <div><i className="fa fa-shopping-cart"></i></div>
-                            <p style={{"fontSize":"25px"}}>No items to review!</p>
-                            <p style={{"padding":"10px 0"}}><Link to="/">Start shopping</Link></p>
-                            </>
-                        )}
-                </div>
-              {basket?.length >=1 &&(
-                <>
-                 <p style={{"padding":"10px 0"}}><Link to="/cart">Go back to cart</Link></p>
-                  <div style={{"display":"flex","alignItems":"center","justifyContent":"space-between"}}>
-                    <h4>Product</h4>
-                    <h4>Price</h4>
-                  </div>
-                  <div>
-                  {basket.map(item => (
-                  <div style={{"display":"flex","alignItems":"center","justifyContent":"space-between"}}>
-                      <img style={{"width":"150px","height":"150px"}} src={item.image1} alt="" />
-                      <h3>${item.price}</h3>
-                  </div>           
-                  ))}
-                  </div>
-                  </>
-              )}
-             
             </div>
           </div>
 

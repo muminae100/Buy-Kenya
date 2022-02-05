@@ -16,10 +16,9 @@ function CartItem({id, title, image1, price, colors}) {
     return (
                        <div className="item">
                         <div className="buttons">
-                          <span onClick={removeFromBasket} className="delete-btn">
+                          <span onClick={removeFromBasket} className="delete-icon">
                               &times;
                           </span>
-                        
                         </div>
                     
                         <div className="image">
@@ -41,6 +40,11 @@ function CartItem({id, title, image1, price, colors}) {
                         </div>
                     
                         <div className="total-price">$ {price}</div>
+                        <div className="delete-from-cart">
+                        <button onClick={removeFromBasket}>
+                            Remove from cart
+                        </button>
+                        </div>
                       </div>
     )
 }
